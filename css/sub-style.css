@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+/* color */
+:root {
+    --companyColor : #223E94;
+}
 
 /* reset */
 * {margin: 0;padding: 0;}
@@ -27,7 +31,6 @@ li {list-style: none;}
 /* ====================
     footer
 ====================*/
-
 
 
 

@@ -9,46 +9,160 @@
     <script src="./js/index-script.js"></script>
 </head>
 <body>
-    <!-- ====================
-        header
-    ==================== -->
-    <header>
-        <div class="headerInner">
-            <a href="" class="toggle"><img src="" alt=""></a>
-            <h2 class="logo"><img src="" alt="로고"></h2>
-            <div class="headerInfo">
-                <a href="./mypage.html" class="mypage">
-                    <img src="" alt="마이페이지">
-                </a>
-                <a href="#" class="money">잔액 : <span>100,000원</span> </a>
-                <div class="log">
-                    <a href="./login.html" class="login">로그인</a>
-                    <p>/</p>
-                    <a href="./join.html" class="join">회원가입</a>
+    <div id="wrap">
+        <!-- ====================
+            header
+        ==================== -->
+        <header>
+            <div class="headerInner">
+                <a href="#" class="toggle"><img src="./images/svg/toggle.svg" alt="메뉴">메뉴</a>
+                <h2 class="logo"><a href="./index.html"><img src="./images/svg/logo.svg" alt="로고"></a></h2>
+                <div class="headerInfo">
+                    <a href="./mypage.html" class="mypage">
+                        <img src="./images/svg/mypage.svg" alt="마이페이지">
+                    </a>
+                    <a href="#" class="money">잔액 : <span>100,000원</span> </a>
+                    <div class="log">
+                        <a href="./login.html" class="logout">로그아웃</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
+
+        <!-- menu -->
+         <div class="menu">
+            <a href="#" class="close"><img src="./images/svg/close.svg" alt="닫기"></a>
+            <ul class="mainMenu">
+                <li>
+                    <a>
+                        <div class="title">
+                            <img src="./images/svg/mainMenu1.svg" alt="주차 예약">
+                            <p>주차 예약</p>
+                        </div>
+                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
+                    </a>
+                    <ul class="subMenu">
+                        <li><a href="#"><img src="./images/svg/주차장 검색.svg" alt="주차장 검색">주차장 검색</a></li>
+                        <li><a href="#"><img src="./images/svg/주차예약 신청.svg" alt="주차예약 신청">주차예약 신청</a></li>
+                        <li><a href="#"><img src="./images/svg/신청내역 확인.svg" alt="신청내역 확인/변경">신청내역 확인/변경</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>
+                        <div class="title">
+                            <img src="./images/svg/mainMenu2.svg" alt="마이페이지">
+                            <p>마이페이지</p>
+                        </div>
+                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
+                    </a>
+                    <ul class="subMenu">
+                        <li><a href="#"><img src="./images/svg/내 정보.svg" alt="내 정보">내 정보</a></li>
+                        <li><a href="#"><img src="./images/svg/정기권 관리.svg" alt="정기권 관리">정기권 관리</a></li>
+                        <li><a href="#"><img src="./images/svg/주차기록.svg" alt="주차기록">주차기록</a></li>
+                        <li><a href="#"><img src="./images/svg/내 후기.svg" alt="내 후기">내 후기</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./sub.html">
+                        <div class="title">
+                            <img src="./images/svg/mainMenu2.svg" alt="미납요금 결제">
+                            <p>미납요금 결제</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="title">
+                            <img src="./images/svg/mainMenu2.svg" alt="주차요금 환불">
+                            <p>주차요금 환불</p>
+                        </div>
+                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
+                    </a>
+                    <ul class="subMenu">
+                        <li><a href="#"><img src="./images/svg/요금 환불 신청.svg" alt="요금 환불 신청">요금 환불 신청</a></li>
+                        <li><a href="#"><img src="./images/svg/환불 내역.svg" alt="환불 내역/결과 조회">환불 내역/결과 조회</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>
+                        <div class="title">
+                            <img src="./images/svg/mainMenu4.svg" alt="멤버쉽 정기권">
+                            <p>멤버쉽 정기권</p>
+                        </div>
+                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
+                    </a>
+                    <ul class="subMenu">
+                        <li><a href="#"><img src="./images/svg/정기권 조회.svg" alt="정기권 조회/신청">정기권 조회/신청</a></li>
+                        <li><a href="#"><img src="./images/svg/정기권 대기 현황.svg" alt="정기권 대기 현황">정기권 대기 현황</a></li>
+                        <li><a href="#"><img src="./images/svg/정기권 환불.svg" alt="정기권 환불">정기권 환불</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>
+                        <div class="title">
+                            <img src="./images/svg/mainMenu5.svg" alt="제휴 공유 주차장">
+                            <p>제휴 공유 주차장</p>
+                        </div>
+                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
+                    </a>
+                    <ul class="subMenu">
+                        <li><a href="#"><img src="./images/svg/제휴 주차장 조회.svg" alt="제휴 주차장 조회">제휴 주차장 조회</a></li>
+                        <li><a href="#"><img src="./images/svg/내 주차장 공유 등록.svg" alt="내 주차장 공유 등록">내 주차장 공유 등록</a></li>
+                        <li><a href="#"><img src="./images/svg/제휴 주차장 매칭 문의.svg" alt="제휴 주차장 매칭 문의">제휴 주차장 매칭 문의</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>
+                        <div class="title">
+                            <img src="./images/svg/mainMenu6.svg" alt="이용안내">
+                            <p>이용안내</p>
+                        </div>
+                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
+                    </a>
+                    <ul class="subMenu">
+                        <li><a href="#"><img src="./images/svg/공지사항.svg" alt="공지사항">공지사항</a></li>
+                        <li><a href="#"><img src="./images/svg/자주 묻는 질문.svg" alt="자주 묻는 질문">자주 묻는 질문</a></li>
+                        <li><a href="#"><img src="./images/svg/개인정보처리방침.svg" alt="개인정보처리방침">개인정보처리방침</a></li>
+                    </ul>
+                </li>
+            </ul>
+         </div>
 
 
 
-    <!-- ====================
-        main
-    ==================== -->
+        <!-- ====================
+            main
+        ==================== -->
 
 
 
 
-    <!-- ====================
-        footer
-    ==================== -->
+        <!-- ====================
+            footer
+        ==================== -->
+        <footer>
+            <div class="footerInner">
+                <div class="blogo"><img src="./images/svg/logo.svg" alt="바텀 로고"></div>
+                <p><span>(주)여차저차</span> | <span>대표자</span> 홍길동 | <span>주소</span> 수원시 팔달구 팔달동 팔달로 수원역 3층</p>
+                <span>사업자번호<a href="#"> 070-3216-6548 </a></span><span>고객센터<a href="#"> 1688-1234 </a></span>
+                <div class="footer_menu">
+                    <a href="#">회사 소개</a>
+                    <a href="#">주차장 운영 현황</a>
+                    <a href="#">개인정보처리방침</a>
+                </div>
+                <a href="#" class="app"><img src="./images/svg/GooglePlay.svg" alt="구글플레이에서 어플 다운로드받기"></a>
+                <select size="1" id="familysite">
+                    <option value="선택" selected>패밀리 사이트</option>
+                    <option value="https://www.naver.com/">네이버</option>
+                </select>
+            </div>
+        </footer>
 
 
-
-
-    
-    <!-- ====================
-        popup
-    ==================== -->
+        
+        <!-- ====================
+            popup
+        ==================== -->
+    </div>
 </body>
 </html>

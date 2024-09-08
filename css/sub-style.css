@@ -15,9 +15,10 @@
 
 a {text-decoration: none;}
 li {list-style: none;}
-p, a, h1, h2, h3, h4, h5, h6, td, th {color:#000;font-family: 'pretendard';}
+p, a, td, th {color:#000;font-family: 'pretendard';}
+h1, h2, h3, h4, h5, h6 {color: #000; font-family: 'NexenTire';}
 
-#wrap {width: 100%;}
+#wrap {width: 100%;overflow: hidden;}
 
 /* ====================
     header
@@ -76,7 +77,8 @@ p, a, h1, h2, h3, h4, h5, h6, td, th {color:#000;font-family: 'pretendard';}
     position: fixed;
     background-color: #fff;
     top: 0;left: 0;
-    /* display: none; */
+
+    display: none;
 }
 #wrap .menu .close{
     width: 40px; height: 40px;
@@ -121,6 +123,246 @@ p, a, h1, h2, h3, h4, h5, h6, td, th {color:#000;font-family: 'pretendard';}
 /* ====================
     main
 ====================*/
+#wrap main {
+    width: 100%;
+    padding: 50px 290px;
+    background-color: #fff;
+}
+#wrap main .title {
+    width: 467px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-left: 436px;
+}
+
+#wrap main .paymentInner {
+    display: flex;
+    gap: 53px;
+    align-items: flex-end;
+    margin-top: 27px;
+}
+
+#wrap main .paymentInner>img {
+    margin-bottom: 202px;
+}
+
+/* non-paymentList */
+#wrap main .paymentInner .non-paymentList {
+    width: 569px;height: 548px;
+    overflow-y: scroll;
+    border-bottom: 5px solid #555;
+}
+#wrap main .paymentInner .non-paymentList>p {
+    font-size: 40px;
+    text-align-last: left;
+    margin-bottom: 5px;
+    border-bottom: 5px solid #555;
+    background-color: #fff;
+}
+#wrap main .paymentInner .non-paymentList>p span {
+    color: var(--companyColor);
+    font-weight: bold;
+}
+#wrap main .paymentInner .non-paymentList::-webkit-scrollbar {
+    display: none;
+}
+#wrap main .paymentInner .non-paymentList .listInner {
+    width: 100%;
+}
+#wrap main .paymentInner .non-paymentList .listInner tr {
+    width: 100%;height: 131px;
+}
+#wrap main .paymentInner .non-paymentList .listInner tr td {
+    text-align: center;
+    border-bottom: 5px dashed #ddd;
+}
+#wrap main .paymentInner .non-paymentList .listInner tr .name {
+    font-size: 35px;
+}
+#wrap main .paymentInner .non-paymentList .listInner tr .date {
+    font-size: 25px;
+    color: #555;
+}
+#wrap main .paymentInner .non-paymentList .listInner tr .price {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+/* selectBox */
+#wrap main .paymentInner .selectBox {
+    width: 569px;height: 500px;
+}
+#wrap main .paymentInner .selectBox .select {
+    border-top: 5px solid var(--companyColor);
+    border-bottom: 5px solid var(--companyColor);
+    padding: 25px 0;
+}
+#wrap main .paymentInner .selectBox .select .carNumber {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: right;
+    margin: 0 38px 25px;
+}
+#wrap main .paymentInner .selectBox .select .parkingInfo {
+    display: flex;
+    gap: 35px;
+    margin: 0 38px;
+}
+#wrap main .paymentInner .selectBox .select .parkingInfo .enterTime,
+#wrap main .paymentInner .selectBox .select .parkingInfo .leaveTime {
+    width: 80px;
+    font-size: 30px;
+    font-weight: 550;
+    text-align: center;
+    margin-top: 25px;
+}
+#wrap main .paymentInner .selectBox .select .parkingInfo .time {
+    width: 270px;
+    height: 180px;
+    font-size: 35px;
+    text-align: center;
+    padding: 44px 56px 92px;
+    box-sizing: border-box;
+    letter-spacing: -4%;
+    background: url("../images/sub_selectArrow.png") no-repeat center/cover;
+}
+#wrap main .paymentInner .selectBox .select .roundingTime {
+    font-size: 35px;
+    font-weight: 550;
+    text-align: center;
+    padding: 10px 0 30px;
+}
+#wrap main .paymentInner .selectBox .select .total {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: right;
+    padding-top: 10px;
+    border-top: 5px dashed #ddd;
+}
+#wrap main .paymentInner .selectBox button {
+    font-size: 32px;
+    font-weight: 550;
+    background-color: #e9e9e9;
+    border: none;
+    padding: 21px 38px;
+    border-radius: 30px;
+    margin-top: 15px;
+    float: right;
+}
+
+#wrap main .pay {
+    width: 743px;
+    margin: 104px 298px;
+
+}
+#wrap main .pay p {
+    font-size: 70px;
+    line-height: 124px;
+    text-align: center;
+    color: #223e94;
+    border-bottom: 5px solid var(--companyColor);
+}
+#wrap main .pay p span {
+    font-size: 80px;
+    font-weight: bold;
+    color: #223e94;
+}
+#wrap main .pay button {
+    font-size: 48px;
+    color: #fff;
+    background-color: var(--companyColor);
+    border: none;
+    border-radius: 30px;
+    padding: 24px 81px;
+    margin: 37px 139px;
+}
+
+
+#wrap main h3 {
+    font-size: 45px;
+    font-weight: 550;
+}
+#wrap main .non-paymentSteps .steps {
+    display: flex;
+    width: 1330px;  
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: center;
+}
+#wrap main .non-paymentSteps .steps li p {
+    width: 182px;
+    height: 100px;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+#wrap main .non-paymentSteps .steps .blueBox p {
+    color: #fff;
+    background-color: var(--companyColor);
+}
+#wrap main .non-paymentSteps .steps .whiteBox p {
+    background-color: #fff;
+    border: 1px solid #555;
+}
+#wrap main .non-paymentSteps .steps li:nth-child(7) p {
+    padding-top: 11px;
+}
+#wrap main .non-paymentSteps .steps li p span {
+    font-size: 15px;
+}
+#wrap main .non-paymentSteps .caution {
+    margin: 36px 0 100px 310px;
+    display: flex;
+    gap: 240px;
+}
+#wrap main .non-paymentSteps .caution li {
+    list-style: disc;
+    line-height: 24px;
+}
+
+
+#wrap main .non-paymentMethod .methodInner {
+    width: 1330px;
+    height: 196px;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    margin: 50px 0 170px;
+}
+#wrap main .non-paymentMethod .methodInner .method1 {
+    width: 665px;
+    height: 160px;
+    border-right: 2px dashed #ddd;
+}
+#wrap main .non-paymentMethod .methodInner .method2 {
+    padding-left: 20px;
+}
+#wrap main .non-paymentMethod .methodInner ul li {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+#wrap main .non-paymentMethod .methodInner ul li p span {
+    font-size: 18px;
+    color: #808080;
+    line-height: 34px;
+}
+#wrap main .non-paymentMethod .methodInner ul li ul li {
+    font-size: 16px;
+    list-style: disc;
+    margin: 10px 0 0 25px;
+    line-height: 17px;
+}
 
 
 

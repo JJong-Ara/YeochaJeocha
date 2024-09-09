@@ -133,7 +133,113 @@
         <!-- ====================
             main
         ==================== -->
-
+        <div class="join_title">회원가입</div>
+        <div class="join_process">
+            <div class="process">
+                <p>01</p>
+                <p>이용 동의</p>
+            </div>
+            <div>
+                <p>02</p>
+                <p>본인 인증</p>
+            </div>
+            <div>
+                <p>03</p>
+                <p>정보 입력</p>
+            </div>
+            <div>
+                <p>04</p>
+                <p>가입 완료</p>
+            </div>
+        </div>
+        <div class="join1">
+            <div class="must">
+                <p>필수</p>
+                <div class="terms_container">
+                    <div class="terms_set">
+                        <div class="terms">
+                            <span>개인정보 수집 및 이용 동의</span><img src="./images/svg/bottomArrow.svg" alt="개인정보 수집 및 이용 동의 약관 열람하기">
+                        </div>
+                        <div class="checkbox"><img src="./images/svg/항목별동의.svg" alt="개인정보 수집 및 이용에 동의하기"></div>
+                    </div>
+                    <div class="terms_set">
+                        <div class="terms">
+                            <span>개인정보 취급 위탁 동의</span><img src="./images/svg/bottomArrow.svg" alt="개인정보 취급 위탁 동의 약관 열람하기">
+                        </div>
+                        <div class="checkbox"><img src="./images/svg/항목별동의.svg" alt="개인정보 취급 위탁에 동의하기"></div>
+                    </div>
+                    <div class="terms_set">
+                        <div class="terms">
+                            <span>개인정보 제 3자 제공 동의</span><img src="./images/svg/bottomArrow.svg" alt="개인정보 제 3자 제공 동의 약관 열람하기">
+                        </div>
+                        <div class="checkbox"><img src="./images/svg/항목별동의.svg" alt="개인정보 제 3자 제공에 동의하기"></div>
+                    </div>
+                    <div class="must_agree">
+                        <div class="checkbox"><img src="./images/svg/항목별동의.svg" alt="필수 항목에 대해 모두 동의하기"><span>필수 항목에 대해 모두 동의합니다.</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="choice">
+                <p>선택</p>
+                <div class="terms_set">
+                    <div class="terms">
+                        <span>개인정보 제 3자 제공 동의</span><img src="./images/svg/bottomArrow.svg" alt="개인정보 제 3자 제공 동의 약관 열람하기">
+                    </div>
+                    <div class="checkbox">
+                        <span>동의</span><img src="./images/svg/항목별동의-1.svg" alt="마케팅 및 광고활용에 동의하기">
+                        <span>동의 안함</span><img src="./images/svg/항목별동의.svg" alt="마케팅 및 광고활용에 동의하지 않기">
+                    </div>
+                </div>
+            </div>
+            <div class="prev_next">
+                <div class="prev">이전</div>
+                <div class="next">다음</div>
+            </div>
+        </div>
+        <div class="join2">
+            <p>아래의 본인인증 수단 중 하나를 선택해주세요.</p>
+            <div class="method">
+                <a class="phone"><img src="./images/svg/phone_light.svg" alt="휴대폰으로 인증하기"><p>휴대폰인증</p></a>
+                <a class="email"><img src="./images/svg/Message_light.svg" alt="이메일로 인증하기"><p>이메일인증</p></a>
+                <a class="pass"><img src="./images/svg/pass.svg" alt="공동인증서로 인증하기"><p>공동인증서</p></a>
+                <a class="i_PIN"><img src="./images/svg/ipin.svg" alt="아이핀으로 인증하기"><p>아이핀인증</p></a>
+            </div>
+            <div class="enter">
+                <div class="enter_name">
+                    <span>이름</span>
+                    <input type="text" id="username">
+                </div>
+                <div class="enter_tel">
+                    <form>
+                        <span>전화번호</span>
+                        <input type="text" id="tel1" maxlength="3"/>
+                        <span>-</span>
+                        <input type="text" id="tel2" maxlength="4"/>
+                        <span>-</span>
+                        <input type="text" id="tel3" maxlength="4"/><br>
+                        <select id="carrier">
+                            <option value="" disabled selected>통신사</option>
+                            <option value="SKT">SKT</option>
+                            <option value="KT">KT</option>
+                            <option value="LG Uplus">LG U+</option>
+                        </select>
+                        <button type="button" id="send_code">인증번호 발송</button>
+                        <p id="timerText"></p>
+                        <span>인증번호</span>
+                        <input type="text" id="code_number" maxlength="6">
+                        <button type="button" id="check_code">인증번호 확인</button>
+                    </form>
+                </div>
+            </div>
+            <div class="prev_next"></div>
+                <div class="prev">이전</div>
+                <div class="next">다음</div>
+            </div>
+        </div>
+        <div class="join3">
+            <p><span>*</span>표시는 필수 항목입니다.</p>
+        </div>
+        <div class="join4"></div>
 
 
 

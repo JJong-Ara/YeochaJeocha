@@ -17,41 +17,53 @@ a {text-decoration: none;}
 li {list-style: none;}
 p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard';}
 
-#wrap {width: 100%;}
+#wrap {width: 100%;
+    margin: 0 auto;
+}
 
 /* ====================
-    header
+header
 ====================*/
 #wrap header {
     width: 100%; height: 96px;
     background-color: #fff;
-}
-#wrap header .headerInner {
-    width: 1342px; height: 96px;
-    display: flex;
-    gap: 240px;
-    align-items: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     box-shadow: 0 5px 10px rgba(60, 119, 207, 0.1);
 }
+#wrap header .headerInner {
+    position: relative;
+    width: 1342px; height: 96px;
+    display: flex;
+    /* gap: 240px; */
+    align-items: center;
+    margin: 0 auto;
+}
 #wrap header .headerInner .toggle {
-    margin-top: -15px;
-    margin-right: 222px;
+    /* margin-top: -15px; */
+    /* margin-right: 222px; */
     font-size: 25px;
     color: var(--companyColor);
     display: flex;
     gap: 20px;
     align-items: center;
+    left: 0;
+}
+#wrap header .headerInner h2 {
+    margin: 0 auto;
 }
 #wrap header .headerInner .headerInfo {
+    position: absolute;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
+    right: 0;
 }
-#wrap header .headerInner .headerInfo .money {
-    margin-right: 14px;
+#wrap header .headerInner .headerInfo .money,
+#wrap header .headerInner .headerInfo .money span {
+    margin-right: 1px;
     height: 30px;
     font-size: 24px;
+    font-weight: 600;
     line-height: 30px;
     color: var(--companyColor);
 }
@@ -77,7 +89,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
     position: fixed;
     background-color: #fff;
     top: 0;left: 0;
-    /* display: none; */
+    display: none;
 }
 #wrap .menu .close{
     width: 40px; height: 40px;
@@ -128,9 +140,10 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
     height: 1369px;
     margin: 0 auto;
 }
-#wrap main .banner {
-    width: 1920px;
+#wrap main .background {
+    width: 100%;
     height: 288px;
+    background: url(/images/mainBanner.png) center/cover;
 }
 #wrap main .search {
     position: relative;
@@ -361,7 +374,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
 }
 #wrap main .floating {
     position: fixed;
-    top: 550px;     /* 피그마에서 구현 안돼있어서 임의로 지정함. 수정해주쇼! */
+    top: 50%;     /* 피그마에서 구현 안돼있어서 임의로 지정함. 수정해주쇼! */
     right: 106px;
     width: 77px;
     height: 269px;
@@ -385,13 +398,13 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
 footer {
     width: 100%;
     height: 192px;
+    box-shadow: 0 -5px 10px rgba(60, 119, 207, 0.1);
 }
 footer .footerInner {
     position: relative;
     width: 1341px;
     height: 100%;
     margin: 0 auto;
-    box-shadow: 0 -5px 10px rgba(60, 119, 207, 0.1);
 }
 footer .footerInner .blogo {
     position: absolute;

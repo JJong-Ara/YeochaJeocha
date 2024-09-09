@@ -18,15 +18,19 @@ li {list-style: none;}
 p, a, td, th {color:#000;font-family: 'pretendard';}
 h1, h2, h3, h4, h5, h6 {color: #000; font-family: 'NexenTire';}
 
-#wrap {width: 100%;overflow: hidden;}
+#wrap {
+    width: 100%;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
 
 /* ====================
     header
 ====================*/
-#wrap header {
-    width: 100%; height: 96px;
-    background-color: #fff;
-}
+
 #wrap header .headerInner {
     width: 1342px; height: 96px;
     display: flex;
@@ -124,10 +128,13 @@ h1, h2, h3, h4, h5, h6 {color: #000; font-family: 'NexenTire';}
     main
 ====================*/
 #wrap main {
-    width: 100%;
-    padding: 50px 290px;
+    width: 1342px;
+    padding: 50px 0 50px 0;
     background-color: #fff;
+    margin: 0 auto;
 }
+
+
 #wrap main .title {
     width: 467px;
     font-size: 60px;
@@ -137,42 +144,50 @@ h1, h2, h3, h4, h5, h6 {color: #000; font-family: 'NexenTire';}
     box-sizing: border-box;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
-    margin-left: 436px;
+    margin: 0 auto;
+}
+
+#wrap main p.subtitle {
+    margin-top: 27px;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: left;
+    background-color: #fff;
+}
+#wrap main p.subtitle span {
+    color: var(--companyColor);
+    font-weight: bold;
 }
 
 #wrap main .paymentInner {
     display: flex;
-    gap: 53px;
-    align-items: flex-end;
-    margin-top: 27px;
+    justify-content: space-between;
+    height: 550px;
+    align-items: center;
 }
 
-#wrap main .paymentInner>img {
-    margin-bottom: 202px;
+#wrap main .paymentInner img {
+    width: 96px;
+    height: 96px;
 }
+
+
 
 /* non-paymentList */
 #wrap main .paymentInner .non-paymentList {
-    width: 569px;height: 548px;
+    width: 569px; height: 550px;
     overflow-y: scroll;
     border-bottom: 5px solid #555;
+    border-top: 5px solid #555;
+    box-sizing: border-box;
 }
-#wrap main .paymentInner .non-paymentList>p {
-    font-size: 40px;
-    text-align-last: left;
-    margin-bottom: 5px;
-    border-bottom: 5px solid #555;
-    background-color: #fff;
-}
-#wrap main .paymentInner .non-paymentList>p span {
-    color: var(--companyColor);
-    font-weight: bold;
-}
+
 #wrap main .paymentInner .non-paymentList::-webkit-scrollbar {
     display: none;
 }
-#wrap main .paymentInner .non-paymentList .listInner {
-    width: 100%;
+#wrap main .paymentInner .non-paymentList table.listInner {
+    width: 100%; height: 550px;
+    box-sizing: border-box;
 }
 #wrap main .paymentInner .non-paymentList .listInner tr {
     width: 100%;height: 131px;
@@ -196,12 +211,14 @@ h1, h2, h3, h4, h5, h6 {color: #000; font-family: 'NexenTire';}
 
 /* selectBox */
 #wrap main .paymentInner .selectBox {
-    width: 569px;height: 500px;
+    width: 569px;
 }
 #wrap main .paymentInner .selectBox .select {
+    height: 550px;
     border-top: 5px solid var(--companyColor);
     border-bottom: 5px solid var(--companyColor);
     padding: 25px 0;
+    box-sizing: border-box;
 }
 #wrap main .paymentInner .selectBox .select .carNumber {
     font-size: 40px;
@@ -245,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {color: #000; font-family: 'NexenTire';}
     padding-top: 10px;
     border-top: 5px dashed #ddd;
 }
-#wrap main .paymentInner .selectBox button {
+#wrap main  button {
     font-size: 32px;
     font-weight: 550;
     background-color: #e9e9e9;
@@ -257,9 +274,13 @@ h1, h2, h3, h4, h5, h6 {color: #000; font-family: 'NexenTire';}
 }
 
 #wrap main .pay {
-    width: 743px;
-    margin: 104px 298px;
-
+    width: 1340px;
+    margin: 0 auto;
+    margin-top: 104px;
+    margin-bottom: 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #wrap main .pay p {
     font-size: 70px;
@@ -274,13 +295,14 @@ h1, h2, h3, h4, h5, h6 {color: #000; font-family: 'NexenTire';}
     color: #223e94;
 }
 #wrap main .pay button {
+    width: 423px;
+    height: 103px;
     font-size: 48px;
+    line-height: 48px;
     color: #fff;
     background-color: var(--companyColor);
     border: none;
     border-radius: 30px;
-    padding: 24px 81px;
-    margin: 37px 139px;
 }
 
 

@@ -78,7 +78,7 @@ p, a, h1, h2, h3, h4, h5, h6, td, th {color:#000;font-family: 'pretendard';}
     background-color: #fff;
     top: 0;left: 0;
 
-    /* display: none; */
+    display: none;
 }
 #wrap .menu .close{
     width: 40px; height: 40px;
@@ -161,11 +161,15 @@ p, a, h1, h2, h3, h4, h5, h6, td, th {color:#000;font-family: 'pretendard';}
     position: absolute;
     top: 32px;right: 0;
 }
-#wrap main .profile .userInfo .membershipPopup {
-    position: absolute;
-    top: 90px;left: 230px;
-    z-index: 3;
+#wrap main .profile .userInfo .membership .membershipPopup {
     display: none;
+}
+#wrap main .profile .userInfo .membership:hover .membershipPopup,
+#wrap main .profile .userInfo .membership:focus .membershipPopup {
+    position: absolute;
+    top: 24px;left: 24px;
+    z-index: 3;
+    display: block;
 }
 
 
@@ -285,13 +289,7 @@ p, a, h1, h2, h3, h4, h5, h6, td, th {color:#000;font-family: 'pretendard';}
 }
 #wrap main .myTF .title{background-color: #a6a6a6;}
 #wrap main .myTF .myFavorites .title {margin-left: 231px;}
-
-#wrap main .myTF h2.on {
-    background-color: #fff;
-}
-#wrap main .myTF h2.on+ul {
-    display: block;
-}
+#wrap main .myTF h2.on {background-color: #fff;}
 
 .myFavorites {
     position: absolute;

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마이페이지</title>
     <link rel="stylesheet" href="./css/mypage-style.css">
-    <script src="./script/jquery-1.12.3.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="./js/mypage-script.js"></script>
 </head>
 <body>
@@ -138,10 +138,10 @@
                 <img src="./images/svg/mypage_photo.svg" alt="프로필 사진" class="picture">
                 <div class="userInfo">
                     <p class="myName">초보운전자<span class="userNumber">#240903</span></p>
-                    <a href="#" class="membership">
+                    <div class="membership">
                         <img src="./images/svg/mypage_classIcon.svg" alt="멤버십 등급">VIP
                         <div class="membershipPopup"><img src="./images/membershipPopup.png" alt="멤버쉽 팝업"></div>
-                    </a>
+                    </div>
                     
                 </div>
                 <div class="options"><img src="./images/svg/mypage_option.svg" alt="설정"></div>
@@ -188,60 +188,64 @@
 
             <div class="myTF">
                 <div class="myTicket">
-                    <h2 class="title on">정기권 관리</h2>
-                    <ul class="ticketInfo">
-                        <li>
-                            <ul>
-                                <li>
-                                    <div class="parkingLogo"><img src="./images/svg/mypage_photo.svg" alt="주차장 로고"></div>
-                                    <p class="name">소망주차장</p>
-                                    <span class="date">2024.09.03 - 2024.12.03</span>
-                                </li>
-                                <li>
-                                    <p class="price">10,000원</p>
-                                    <span class="card">신한 체크 결제(매달 3일)</span>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <div class="parkingLogo"><img src="./images/svg/mypage_photo.svg" alt="주차장 로고"></div>
-                                    <p class="name">믿음주차장</p>
-                                    <span class="date">2024.09.03 - 2024.12.03</span>
-                                </li>
-                                <li>
-                                    <p class="price">10,000원</p>
-                                    <span class="card">신한 체크 결제(매달 3일)</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <li>
+                        <h2 class="title on">정기권 관리</h2>
+                        <ul class="ticketInfo">
+                            <li>
+                                <ul>
+                                    <li>
+                                        <div class="parkingLogo"><img src="./images/svg/mypage_photo.svg" alt="주차장 로고"></div>
+                                        <p class="name">소망주차장</p>
+                                        <span class="date">2024.09.03 - 2024.12.03</span>
+                                    </li>
+                                    <li>
+                                        <p class="price">10,000원</p>
+                                        <span class="card">신한 체크 결제(매달 3일)</span>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <div class="parkingLogo"><img src="./images/svg/mypage_photo.svg" alt="주차장 로고"></div>
+                                        <p class="name">믿음주차장</p>
+                                        <span class="date">2024.09.03 - 2024.12.03</span>
+                                    </li>
+                                    <li>
+                                        <p class="price">10,000원</p>
+                                        <span class="card">신한 체크 결제(매달 3일)</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                 </div>
                 <div class="myFavorites">
-                    <h2 class="title">즐겨찾기</h2>
-                    <ul class="favoritesInfo">
-                        <li>
-                            <ul>
-                                <li>
-                                    <div class="parkingLogo"><img src="./images/svg/mypage_photo.svg" alt="주차장 로고"></div>
-                                    <p class="name">소망주차장</p>
-                                </li>
-                                <li>
-                                    <p class="place">행궁동</p>
-                                    <div class="marking"><img src="./images/svg/mypage_star.svg" alt="ㅈ르겨찾기 표시"></div>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <div class="parkingLogo"><img src="./images/svg/mypage_photo.svg" alt="주차장 로고"></div>
-                                    <p class="name">믿음주차장</p>
-                                </li>
-                                <li>
-                                    <p class="place">행궁동</p>
-                                    <div class="marking"><img src="./images/svg/mypage_star.svg" alt="ㅈ르겨찾기 표시"></div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <li>
+                        <h2 class="title">즐겨찾기</h2>
+                        <ul class="favoritesInfo">
+                            <li>
+                                <ul>
+                                    <li>
+                                        <div class="parkingLogo"><img src="./images/svg/mypage_photo.svg" alt="주차장 로고"></div>
+                                        <p class="name">소망주차장</p>
+                                    </li>
+                                    <li>
+                                        <p class="place">행궁동</p>
+                                        <div class="marking"><img src="./images/svg/mypage_star.svg" alt="ㅈ르겨찾기 표시"></div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <div class="parkingLogo"><img src="./images/svg/mypage_photo.svg" alt="주차장 로고"></div>
+                                        <p class="name">믿음주차장</p>
+                                    </li>
+                                    <li>
+                                        <p class="place">행궁동</p>
+                                        <div class="marking"><img src="./images/svg/mypage_star.svg" alt="ㅈ르겨찾기 표시"></div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                 </div>
             </div>
 

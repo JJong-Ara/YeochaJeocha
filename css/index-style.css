@@ -1,8 +1,14 @@
 @charset "utf-8";
 
 /* font */
-@import url('https://webfontworld.github.io/nexen/NexenTire.css');
+@font-face {
+    font-family: 'NEXEN TIRE';
+    src: url('../font/NEXEN_TIRE_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 
 /* color */
 :root {
@@ -15,128 +21,109 @@
 
 a {text-decoration: none;}
 li {list-style: none;}
-p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard';}
+p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'pretendard';}
 
-#wrap {
+
+#wrap header {
     width: 100%;
-    position: relative;
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 999999;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(60, 119, 207, 0.1);
 }
 
 /* ====================
     header
 ====================*/
-#wrap header {
-    width: 100%; height: 96px;
-    background-color: #fff;
-    z-index: 3;
-    position: fixed;
+
+.headerInner {
+    width: 1920px; height: 96px;
+    display: flex;
 }
-#wrap header .headerInner {
+
+.headerIcon_container {
     width: 1342px; height: 96px;
     display: flex;
-    align-items: center;
-    margin: 0 auto;
-    box-shadow: 0 5px 10px rgba(60, 119, 207, 0.1);
     justify-content: space-between;
     position: relative;
+    margin: 0 auto;
+    padding-top: 25px;
+    box-sizing: border-box;
 }
 
-#wrap header .headerInner h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 요소 크기의 절반만큼 이동 */
+.left_icon button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
-#wrap header .headerInner .toggle {
+.left_icon p {
+    float: right;
     font-size: 25px;
-    color: var(--companyColor);
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-#wrap header .headerInner .headerInfo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-#wrap header .headerInner .headerInfo .mypage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#wrap header .headerInner .headerInfo .mypage .money {
-    height: 30px;
-    font-size: 24px;
-    line-height: 30px;
-    color: var(--companyColor);
-    display: flex;
-    gap: 5px;
-}
-
-#wrap header .headerInner .headerInfo .mypage .money span {
+    line-height: 40px;
+    margin-left: 20px;
     color: var(--companyColor);
 }
 
-#wrap header .headerInner .headerInfo .bell img {
-    color: #223E94;
-}
-
-#wrap header .headerInner .headerInfo .log {
-    display: flex;
-    background-color: var(--companyColor);
-    border-radius: 10px;
-    width: 92px;
-    height: 36px;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 11px;
-}
-
-#wrap header .headerInner .headerInfo .log a {
-    color: #fff;
-    font-size: 20px;
-    line-height: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-
-
-
-/* menu */
-#wrap .menu {
+/* side-side-bar */
+.side-bar {
     width: 358px;
     height: 1080px;
-    z-index: 4;
+    z-index: 99999999;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: #fff;
-    top: 0;left: 0;
-    /* display: none; */
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-358px);
 }
-#wrap .menu .close{
+
+.side-bar.active {
+    transform: translateX(0); /*사이드바가 화면에 나타남*/
+}
+
+.side-bar-header {
+    height: 150px;
+}
+
+#side-closeToggle{
     width: 40px; height: 40px;
     position: absolute;
-    top: 28px;right: 28px;
+    top: 15px;
+    right: 28px;
+    padding-top: 5px;
 }
-#wrap .menu .mainMenu {
-    margin: 195px 0 0 46px;
+
+.mainMenu {
+    margin: 0 0 0 46px;
 }
-#wrap .menu .mainMenu li>a {
+.mainMenu li>a {
     width: 268px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 0px;
 }
-#wrap .menu .mainMenu li>a .title{
+.mainMenu li>a .title{
     font-size: 28px;
     letter-spacing: -2px;
     display: flex;
     gap: 10px;
 }
-#wrap .menu .mainMenu li .subMenu li>a {
+
+.subMenu {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+/* 서브메뉴가 열릴 때 */
+.accordion-item.active .subMenu {
+    display: block;
+}
+
+.subMenu li>a {
     font-size: 20px;
     line-height: 24px;
     display: flex;
@@ -147,10 +134,88 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
     width: 268px;
     box-sizing: border-box;
 }
-#wrap .menu .mainMenu li .subMenu li>a img {
+.subside-bar li>a img {
     width: 24px;
 }
 
+.headerIcon_container .logo {
+    position: absolute;
+    top: 50%;
+    padding-top: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 요소 크기의 절반만큼 이동 */
+}
+
+.headerIcon_container .logo img {
+    height: 70px;
+}
+
+.right_icon {
+    display: flex;
+}
+
+.headerInfo {
+    display: flex;
+    gap: 15px;
+}
+
+.mypage {
+    display: flex;
+    gap: 8px;
+}
+
+.mypage img {
+    width: 41px;
+    height: 41px;
+    padding-top: 5px;
+}
+
+.money {
+    font-size: 24px;
+    line-height: 41px;
+    color: var(--companyColor);
+    display: flex;
+    gap: 5px;
+    padding-top: 5px;
+}
+
+.money span {
+    color: var(--companyColor);
+}
+
+.bell {
+    color: #223E94;
+    padding-top: 8px;
+    position: relative;
+}
+.bell .noticePopup {
+    display: none;
+}
+.bell:hover .noticePopup,
+.bell:focus .noticePopup {
+    position: absolute;
+    top: 42px;right: -44px;
+    display: block;
+}
+
+.log {
+    display: flex;
+    background-color: var(--companyColor);
+    border-radius: 10px;
+    width: 92px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 11px;
+}
+
+.log a {
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+}
 
 
 
@@ -162,8 +227,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
     position: relative;
     width: 1920px;
     height: 1369px;
-    margin: 0 auto;
-    top: 96px;
+    margin: 121px auto 0;
 }
 #wrap main .banner {
     width: 1920px;
@@ -374,15 +438,14 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
 }
 #wrap main .business_part {
     position: relative;
-    top: -120px;
     width: 1341px;
     height: 282px;
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 50px;
     justify-content: space-between;
+    position: relative;
 }
 #wrap main .business_part a {
-    position: relative;
     top: 66px;
     width: 644px;
     height: 282px;
@@ -431,13 +494,13 @@ footer {
     width: 100%;
     height: 192px;
     z-index: 2;
+    box-shadow: 0 -5px 10px rgba(60, 119, 207, 0.1);
 }
 footer .footerInner {
     position: relative;
     width: 1341px;
     height: 100%;
     margin: 0 auto;
-    box-shadow: 0 -5px 10px rgba(60, 119, 207, 0.1);
 }
 footer .footerInner .blogo {
     position: absolute;
@@ -446,8 +509,7 @@ footer .footerInner .blogo {
     height: 30px;
 }
 footer .footerInner .blogo img {
-    width: 100%;
-    height: auto;
+    height: 40px;
 }
 footer .footerInner p,
 footer .footerInner span,

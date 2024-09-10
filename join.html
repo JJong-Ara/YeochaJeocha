@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
     <link rel="stylesheet" href="./css/join-style.css">
-    <script src="./script/jquery-1.12.3.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./js/common.js"></script>
     <script src="./js/join-script.js"></script>
 </head>
 <body>
@@ -15,118 +16,135 @@
         ==================== -->
         <header>
             <div class="headerInner">
-                <a href="#" class="toggle"><img src="./images/svg/toggle.svg" alt="메뉴">메뉴</a>
-                <h2 class="logo"><a href="./index.html"><img src="./images/svg/logo.svg" alt="로고"></a></h2>
-                <div class="headerInfo">
-                    <a href="./mypage.html" class="mypage">
-                        <img src="./images/svg/mypage.svg" alt="마이페이지">
-                    </a>
-                    <a href="#" class="money">잔액 : <span>100,000원</span> </a>
-                    <div class="log">
-                        <a href="./login.html" class="logout">로그아웃</a>
+                <div class="headerIcon_container">
+                    <div class="left_icon">
+                        <!-- 토글 --> 
+                        <button id="main-toggle">
+                            <img src="./images/svg/toggle.svg" alt="토글 아이콘">
+                            <p>메뉴</p>
+                        </button>
+                        <!-- 토글버튼 클릭 시 실행되는 사이드 메뉴바 -->
+                        <div id="siderBar" class="side-bar">
+                            <div class="side-bar-header">
+                                <button id="side-closeToggle">
+                                    <img src="./images/svg/close.svg" alt="토글 아이콘">
+                                </button>
+                            </div>
+                            <ul class="mainMenu">
+                                <li class="accordion-item">
+                                    <a class="accordion-toggle">
+                                        <div class="title">
+                                            <img src="./images/svg/mainMenu1.svg" alt="주차 예약">
+                                            <p>주차 예약</p>
+                                        </div>
+                                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
+                                    </a>
+                                    <ul class="subMenu">
+                                        <li><a href="#"><img src="./images/svg/주차장 검색.svg" alt="주차장 검색">주차장 검색</a></li>
+                                        <li><a href="#"><img src="./images/svg/주차예약 신청.svg" alt="주차예약 신청">주차예약 신청</a></li>
+                                        <li><a href="#"><img src="./images/svg/신청내역 확인.svg" alt="신청내역 확인/변경">신청내역 확인/변경</a></li>
+                                    </ul>
+                                </li>
+                                <li class="accordion-item">
+                                    <a class="accordion-toggle">
+                                        <div class="title">
+                                            <img src="./images/svg/mainMenu2.svg" alt="마이페이지">
+                                            <p>마이페이지</p>
+                                        </div>
+                                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
+                                    </a>
+                                    <ul class="subMenu">
+                                        <li><a href="#"><img src="./images/svg/내 정보.svg" alt="내 정보">내 정보</a></li>
+                                        <li><a href="#"><img src="./images/svg/정기권 관리.svg" alt="정기권 관리">정기권 관리</a></li>
+                                        <li><a href="#"><img src="./images/svg/주차기록.svg" alt="주차기록">주차기록</a></li>
+                                        <li><a href="#"><img src="./images/svg/내 후기.svg" alt="내 후기">내 후기</a></li>
+                                    </ul>
+                                </li>
+                                <li class="accordion-item">
+                                    <a href="./sub.html" class="accordion-toggle">
+                                        <div class="title">
+                                            <img src="./images/svg/mainMenu2.svg" alt="미납요금 결제">
+                                            <p>미납요금 결제</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="accordion-item">
+                                    <a class="accordion-toggle">
+                                        <div class="title">
+                                            <img src="./images/svg/mainMenu2.svg" alt="주차요금 환불">
+                                            <p>주차요금 환불</p>
+                                        </div>
+                                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
+                                    </a>
+                                    <ul class="subMenu">
+                                        <li><a href="#"><img src="./images/svg/요금 환불 신청.svg" alt="요금 환불 신청">요금 환불 신청</a></li>
+                                        <li><a href="#"><img src="./images/svg/환불 내역.svg" alt="환불 내역/결과 조회">환불 내역/결과 조회</a></li>
+                                    </ul>
+                                </li>
+                                <li class="accordion-item">
+                                    <a class="accordion-toggle">
+                                        <div class="title">
+                                            <img src="./images/svg/mainMenu4.svg" alt="멤버십 정기권">
+                                            <p>멤버십 정기권</p>
+                                        </div>
+                                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
+                                    </a>
+                                    <ul class="subMenu">
+                                        <li><a href="#"><img src="./images/svg/정기권 조회.svg" alt="정기권 조회/신청">정기권 조회/신청</a></li>
+                                        <li><a href="#"><img src="./images/svg/정기권 대기 현황.svg" alt="정기권 대기 현황">정기권 대기 현황</a></li>
+                                        <li><a href="#"><img src="./images/svg/정기권 환불.svg" alt="정기권 환불">정기권 환불</a></li>
+                                    </ul>
+                                </li>
+                                <li class="accordion-item">
+                                    <a class="accordion-toggle">
+                                        <div class="title">
+                                            <img src="./images/svg/mainMenu5.svg" alt="제휴 공유 주차장">
+                                            <p>제휴 공유 주차장</p>
+                                        </div>
+                                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
+                                    </a>
+                                    <ul class="subMenu">
+                                        <li><a href="#"><img src="./images/svg/제휴 주차장 조회.svg" alt="제휴 주차장 조회">제휴 주차장 조회</a></li>
+                                        <li><a href="#"><img src="./images/svg/내 주차장 공유 등록.svg" alt="내 주차장 공유 등록">내 주차장 공유 등록</a></li>
+                                        <li><a href="#"><img src="./images/svg/제휴 주차장 매칭 문의.svg" alt="제휴 주차장 매칭 문의">제휴 주차장 매칭 문의</a></li>
+                                    </ul>
+                                </li>
+                                <li class="accordion-item">
+                                    <a class="accordion-toggle">
+                                        <div class="title">
+                                            <img src="./images/svg/mainMenu6.svg" alt="이용안내">
+                                            <p>이용안내</p>
+                                        </div>
+                                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
+                                    </a>
+                                    <ul class="subMenu">
+                                        <li><a href="#"><img src="./images/svg/공지사항.svg" alt="공지사항">공지사항</a></li>
+                                        <li><a href="#"><img src="./images/svg/자주 묻는 질문.svg" alt="자주 묻는 질문">자주 묻는 질문</a></li>
+                                        <li><a href="#"><img src="./images/svg/개인정보처리방침.svg" alt="개인정보처리방침">개인정보처리방침</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h2 class="logo"><a href="./index.html"><img src="./images/svg/logo.svg" alt="로고"></a></h2>
+                    <div class="right_icon">
+                        <div class="headerInfo">
+                            <a href="./mypage.html" class="mypage">
+                                <img src="./images/svg/mypage.svg" alt="마이페이지">
+                                <div class="money">잔액 : <span>100,000원</span> </div>
+                            </a>
+                            <div class="bell">
+                                <img src="./images/svg/Bell_fill.svg" alt="알림">
+                                <div class="noticePopup"><img src="./images/noticePopup.png" alt="알림창"></div>
+                            </div>
+                            <div class="log">
+                                <a href="./login.html" class="logout">로그아웃</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
-
-        <!-- menu -->
-         <div class="menu">
-            <a href="#" class="close"><img src="./images/svg/close.svg" alt="닫기"></a>
-            <ul class="mainMenu">
-                <li>
-                    <a>
-                        <div class="title">
-                            <img src="./images/svg/mainMenu1.svg" alt="주차 예약">
-                            <p>주차 예약</p>
-                        </div>
-                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
-                    </a>
-                    <ul class="subMenu">
-                        <li><a href="#"><img src="./images/svg/주차장 검색.svg" alt="주차장 검색">주차장 검색</a></li>
-                        <li><a href="#"><img src="./images/svg/주차예약 신청.svg" alt="주차예약 신청">주차예약 신청</a></li>
-                        <li><a href="#"><img src="./images/svg/신청내역 확인.svg" alt="신청내역 확인/변경">신청내역 확인/변경</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a>
-                        <div class="title">
-                            <img src="./images/svg/mainMenu2.svg" alt="마이페이지">
-                            <p>마이페이지</p>
-                        </div>
-                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
-                    </a>
-                    <ul class="subMenu">
-                        <li><a href="#"><img src="./images/svg/내 정보.svg" alt="내 정보">내 정보</a></li>
-                        <li><a href="#"><img src="./images/svg/정기권 관리.svg" alt="정기권 관리">정기권 관리</a></li>
-                        <li><a href="#"><img src="./images/svg/주차기록.svg" alt="주차기록">주차기록</a></li>
-                        <li><a href="#"><img src="./images/svg/내 후기.svg" alt="내 후기">내 후기</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="./sub.html">
-                        <div class="title">
-                            <img src="./images/svg/mainMenu2.svg" alt="미납요금 결제">
-                            <p>미납요금 결제</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <div class="title">
-                            <img src="./images/svg/mainMenu2.svg" alt="주차요금 환불">
-                            <p>주차요금 환불</p>
-                        </div>
-                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
-                    </a>
-                    <ul class="subMenu">
-                        <li><a href="#"><img src="./images/svg/요금 환불 신청.svg" alt="요금 환불 신청">요금 환불 신청</a></li>
-                        <li><a href="#"><img src="./images/svg/환불 내역.svg" alt="환불 내역/결과 조회">환불 내역/결과 조회</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a>
-                        <div class="title">
-                            <img src="./images/svg/mainMenu4.svg" alt="멤버쉽 정기권">
-                            <p>멤버쉽 정기권</p>
-                        </div>
-                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
-                    </a>
-                    <ul class="subMenu">
-                        <li><a href="#"><img src="./images/svg/정기권 조회.svg" alt="정기권 조회/신청">정기권 조회/신청</a></li>
-                        <li><a href="#"><img src="./images/svg/정기권 대기 현황.svg" alt="정기권 대기 현황">정기권 대기 현황</a></li>
-                        <li><a href="#"><img src="./images/svg/정기권 환불.svg" alt="정기권 환불">정기권 환불</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a>
-                        <div class="title">
-                            <img src="./images/svg/mainMenu5.svg" alt="제휴 공유 주차장">
-                            <p>제휴 공유 주차장</p>
-                        </div>
-                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
-                    </a>
-                    <ul class="subMenu">
-                        <li><a href="#"><img src="./images/svg/제휴 주차장 조회.svg" alt="제휴 주차장 조회">제휴 주차장 조회</a></li>
-                        <li><a href="#"><img src="./images/svg/내 주차장 공유 등록.svg" alt="내 주차장 공유 등록">내 주차장 공유 등록</a></li>
-                        <li><a href="#"><img src="./images/svg/제휴 주차장 매칭 문의.svg" alt="제휴 주차장 매칭 문의">제휴 주차장 매칭 문의</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a>
-                        <div class="title">
-                            <img src="./images/svg/mainMenu6.svg" alt="이용안내">
-                            <p>이용안내</p>
-                        </div>
-                        <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
-                    </a>
-                    <ul class="subMenu">
-                        <li><a href="#"><img src="./images/svg/공지사항.svg" alt="공지사항">공지사항</a></li>
-                        <li><a href="#"><img src="./images/svg/자주 묻는 질문.svg" alt="자주 묻는 질문">자주 묻는 질문</a></li>
-                        <li><a href="#"><img src="./images/svg/개인정보처리방침.svg" alt="개인정보처리방침">개인정보처리방침</a></li>
-                    </ul>
-                </li>
-            </ul>
-         </div>
 
 
 
@@ -135,7 +153,7 @@
         ==================== -->
         <div class="join_title">회원가입</div>
         <div class="join_process">
-            <div class="process">
+            <div class="active">
                 <p>01</p>
                 <p>이용 동의</p>
             </div>
@@ -154,40 +172,38 @@
         </div>
         <div class="join1">
             <div class="must">
-                <p>필수</p>
-                <div class="terms_container">
-                    <div class="terms_set">
-                        <div class="terms">
-                            <span>개인정보 수집 및 이용 동의</span><img src="./images/svg/bottomArrow.svg" alt="개인정보 수집 및 이용 동의 약관 열람하기">
-                        </div>
-                        <div class="checkbox"><img src="./images/svg/항목별동의.svg" alt="개인정보 수집 및 이용에 동의하기"></div>
+                <div class="terms_set">
+                    <p>필수</p>
+                    <div class="terms">
+                        <span>개인정보 수집 및 이용 동의</span><img src="./images/svg/arrow_bottom.svg" alt="개인정보 수집 및 이용 동의 약관 열람하기">
                     </div>
-                    <div class="terms_set">
-                        <div class="terms">
-                            <span>개인정보 취급 위탁 동의</span><img src="./images/svg/bottomArrow.svg" alt="개인정보 취급 위탁 동의 약관 열람하기">
-                        </div>
-                        <div class="checkbox"><img src="./images/svg/항목별동의.svg" alt="개인정보 취급 위탁에 동의하기"></div>
+                    <div class="checkbox"><img src="./images/svg/check_black.svg" alt="개인정보 수집 및 이용에 동의하기" class="checkboxImg" id="checkbox1" data-checked="false"></div>
+                </div>
+                <div class="terms_set">
+                    <div class="terms">
+                        <span>개인정보 취급 위탁 동의</span><img src="./images/svg/arrow_bottom.svg" alt="개인정보 취급 위탁 동의 약관 열람하기">
                     </div>
-                    <div class="terms_set">
-                        <div class="terms">
-                            <span>개인정보 제 3자 제공 동의</span><img src="./images/svg/bottomArrow.svg" alt="개인정보 제 3자 제공 동의 약관 열람하기">
-                        </div>
-                        <div class="checkbox"><img src="./images/svg/항목별동의.svg" alt="개인정보 제 3자 제공에 동의하기"></div>
+                    <div class="checkbox"><img src="./images/svg/check_black.svg" alt="개인정보 취급 위탁에 동의하기" class="checkboxImg" id="checkbox2" data-checked="false"></div>
+                </div>
+                <div class="terms_set">
+                    <div class="terms">
+                        <span>개인정보 제 3자 제공 동의</span><img src="./images/svg/arrow_bottom.svg" alt="개인정보 제 3자 제공 동의 약관 열람하기">
                     </div>
-                    <div class="must_agree">
-                        <div class="checkbox"><img src="./images/svg/항목별동의.svg" alt="필수 항목에 대해 모두 동의하기"><span>필수 항목에 대해 모두 동의합니다.</span></div>
-                    </div>
+                    <div class="checkbox"><img src="./images/svg/check_black.svg" alt="개인정보 제 3자 제공에 동의하기" class="checkboxImg" id="checkbox3" data-checked="false"></div>
+                </div>
+                <div class="must_agree">
+                    <div class="checkbox"><img src="./images/svg/check_black.svg" alt="필수 항목에 대해 모두 동의하기" class="checkboxImg" id="checkbox4" data-checked="false"><span>필수 항목에 대해 모두 동의합니다.</span></div>
                 </div>
             </div>
             <div class="choice">
-                <p>선택</p>
                 <div class="terms_set">
+                    <p>선택</p>
                     <div class="terms">
-                        <span>개인정보 제 3자 제공 동의</span><img src="./images/svg/bottomArrow.svg" alt="개인정보 제 3자 제공 동의 약관 열람하기">
+                        <span>개인정보 제 3자 제공 동의</span><img src="./images/svg/arrow_bottom.svg" alt="개인정보 제 3자 제공 동의 약관 열람하기">
                     </div>
                     <div class="checkbox">
-                        <span>동의</span><img src="./images/svg/항목별동의-1.svg" alt="마케팅 및 광고활용에 동의하기">
-                        <span>동의 안함</span><img src="./images/svg/항목별동의.svg" alt="마케팅 및 광고활용에 동의하지 않기">
+                        <span>동의</span><img src="./images/svg/check_black.svg" alt="마케팅 및 광고활용에 동의하기" class="checkboxImg" id="checkbox5" data-checked="false">
+                        <span>동의 안함</span><img src="./images/svg/check_black.svg" alt="마케팅 및 광고활용에 동의하지 않기" class="checkboxImg" id="checkbox6" data-checked="false">
                     </div>
                 </div>
             </div>
@@ -199,24 +215,24 @@
         <div class="join2">
             <p>아래의 본인인증 수단 중 하나를 선택해주세요.</p>
             <div class="method">
-                <a class="phone"><img src="./images/svg/phone_light.svg" alt="휴대폰으로 인증하기"><p>휴대폰인증</p></a>
-                <a class="email"><img src="./images/svg/Message_light.svg" alt="이메일로 인증하기"><p>이메일인증</p></a>
-                <a class="pass"><img src="./images/svg/pass.svg" alt="공동인증서로 인증하기"><p>공동인증서</p></a>
-                <a class="i_PIN"><img src="./images/svg/ipin.svg" alt="아이핀으로 인증하기"><p>아이핀인증</p></a>
+                <a class="method_click"><img src="./images/svg/phone_light.svg" alt="휴대폰으로 인증하기"><p>휴대폰인증</p></a>
+                <a><img src="./images/svg/Message_light.svg" alt="이메일로 인증하기"><p>이메일인증</p></a>
+                <a><img src="./images/svg/pass.svg" alt="공동인증서로 인증하기"><p>공동인증서</p></a>
+                <a><img src="./images/svg/ipin.svg" alt="아이핀으로 인증하기"><p>아이핀인증</p></a>
             </div>
             <div class="enter">
                 <div class="enter_name">
                     <span>이름</span>
-                    <input type="text" id="username">
+                    <input type="text" id="username" required>
                 </div>
                 <div class="enter_tel">
                     <form>
                         <span>전화번호</span>
-                        <input type="text" id="tel1" maxlength="3"/>
+                        <input type="text" id="tel1" required maxlength="3"/>
                         <span>-</span>
-                        <input type="text" id="tel2" maxlength="4"/>
+                        <input type="text" id="tel2" required maxlength="4"/>
                         <span>-</span>
-                        <input type="text" id="tel3" maxlength="4"/><br>
+                        <input type="text" id="tel3" required maxlength="4"/><br>
                         <select id="carrier">
                             <option value="" disabled selected>통신사</option>
                             <option value="SKT">SKT</option>
@@ -226,20 +242,69 @@
                         <button type="button" id="send_code">인증번호 발송</button>
                         <p id="timerText"></p>
                         <span>인증번호</span>
-                        <input type="text" id="code_number" maxlength="6">
+                        <input type="text" id="code_number" required maxlength="6">
                         <button type="button" id="check_code">인증번호 확인</button>
                     </form>
                 </div>
             </div>
-            <div class="prev_next"></div>
+            <div class="prev_next">
                 <div class="prev">이전</div>
                 <div class="next">다음</div>
             </div>
         </div>
         <div class="join3">
-            <p><span>*</span>표시는 필수 항목입니다.</p>
+            <p><span>* </span>표시는 필수 항목입니다.</p>
+            <form>
+                <div class="id"><p><span>* </span>아이디</p></div>
+                <input type="text" class="longbox" required>
+                <button type="button" id="check_id">중복 확인</button><br>
+                <div class="password"><p><span>* </span>비밀번호</p></div>
+                <input type="password" class="longbox" required><br>
+                <div class="password_check"><p><span>* </span>비밀번호 확인</p></div>
+                <input type="password" class="longbox" required><br>
+                <div class="name"><p><span>* </span>이름</p></div>
+                <input type="text" class="longbox" required><br>
+                <div class="tel"><p><span>* </span>연락처</p></div>
+                <input type="text" id="tel4" required maxlength="3"/>
+                <span>-</span>
+                <input type="text" id="tel5" required maxlength="4"/>
+                <span>-</span>
+                <input type="text" id="tel6" required maxlength="4"/>
+            </form>
+            <form>
+                <div class="owner"><p><span>* </span>차량소유주명</p></div>
+                <input type="text" class="shortbox" required><br>
+                <div class="car_number"><p><span>* </span>차량번호</p></div>
+                <input type="text" class="shortbox" required><br>
+                <div class="address"><p><span>* </span>주소</p></div>
+                <input type="text" class="address1" required><br>
+                <input type="text" class="address2" required>
+                <input type="text" class="address3" required>
+                <button type="button" id="postcode">우편번호</button><br>
+                <div class="address"><p>이메일</p></div>
+                <input type="text" class="longbox"> @
+                <select id="mail_address">
+                        <option value="" disabled selected>메일 주소</option>
+                        <option value="네이버 메일주소">naver.com</option>
+                        <option value="다음 메일주소">daum.net</option>
+                        <option value="구글 메일주소">gmail.com</option>
+                </select>
+            </form>
+            <div class="prev_next">
+                <div class="prev">이전</div>
+                <div class="next">다음</div>
+            </div>
         </div>
-        <div class="join4"></div>
+        <div class="join4">
+            <h3>누구나. 쉽고. <span>빠르게!</span></h3>
+            <p>여차저차 가입을 환영합니다!</p>
+            <p>지금 바로 여자저차만의 주차 혜택을 누릴 수 있습니다.</p>
+            <p>로그인화면으로 이동하시겠습니까?</p>
+            <div class="prev_next">
+                <div class="prev">사이트 이용 안내영상</div>
+                <div class="next">로그인 화면으로 이동하기</div>
+            </div>
+        </div>
 
 
 
@@ -266,9 +331,7 @@
 
 
         
-        <!-- ====================
-            popup
-        ==================== -->
+        
     </div>
 </body>
 </html>

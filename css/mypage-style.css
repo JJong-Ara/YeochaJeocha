@@ -78,7 +78,7 @@ p, a, h1, h2, h3, h4, h5, h6, td, th {color:#000;font-family: 'pretendard';}
     background-color: #fff;
     top: 0;left: 0;
 
-    display: none;
+    /* display: none; */
 }
 #wrap .menu .close{
     width: 40px; height: 40px;
@@ -166,9 +166,6 @@ p, a, h1, h2, h3, h4, h5, h6, td, th {color:#000;font-family: 'pretendard';}
     top: 90px;left: 230px;
     z-index: 3;
     display: none;
-}
-#wrap main .profile .userInfo .membershipPopup.on {
-    display: block;
 }
 
 
@@ -288,6 +285,13 @@ p, a, h1, h2, h3, h4, h5, h6, td, th {color:#000;font-family: 'pretendard';}
 }
 #wrap main .myTF .title{background-color: #a6a6a6;}
 #wrap main .myTF .myFavorites .title {margin-left: 231px;}
+
+#wrap main .myTF h2.on {
+    background-color: #fff;
+}
+#wrap main .myTF h2.on+ul {
+    display: block;
+}
 
 .myFavorites {
     position: absolute;

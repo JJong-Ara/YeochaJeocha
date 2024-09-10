@@ -15,7 +15,7 @@
 
 a {text-decoration: none;}
 li {list-style: none;}
-p, a, h1, h2, h3, h4, h5, h6, td, th {color:#000;font-family: 'pretendard';}
+p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard';}
 
 #wrap {width: 100%;}
 
@@ -32,6 +32,7 @@ p, a, h1, h2, h3, h4, h5, h6, td, th {color:#000;font-family: 'pretendard';}
     gap: 240px;
     align-items: center;
     margin: 0 auto;
+    box-shadow: 0 5px 10px rgba(60, 119, 207, 0.1);
 }
 #wrap header .headerInner .toggle {
     margin-top: -15px;
@@ -121,7 +122,259 @@ p, a, h1, h2, h3, h4, h5, h6, td, th {color:#000;font-family: 'pretendard';}
 /* ====================
     main
 ====================*/
-
+#wrap main {
+    /* position: relative; */
+    width: 1920px;
+    height: 1369px;
+    margin: 0 auto;
+}
+#wrap main .banner {
+    width: 1920px;
+    height: 288px;
+}
+#wrap main .search {
+    position: relative;
+    width: 1341px;
+    height: 230px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+    top: -203px;
+}
+#wrap main .search .search_local,
+#wrap main .search .search_date,
+#wrap main .search .search_keyword,
+#wrap main .search .search_kind {
+    position: absolute;
+    width: 170px;
+    height: 48px;
+    border-bottom: 3px solid #585858;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 15px;
+    cursor: pointer;
+}
+#wrap main .search p {
+    position: relative;
+    width: 100%;
+    font-size: 20px;
+}
+#wrap main .search span {
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    color: var(--companyColor);
+}
+#wrap main .search .search_local {
+    margin: 29px 0 0 61px;
+}
+#wrap main .search .search_date {
+    margin: 29px 0 0 287px;
+}
+#wrap main .search .search_keyword {
+    width: 640px;
+    margin: 29px 0 0 506px;
+}
+#wrap main .search .search_kind {
+    margin: 91px 0 0 61px;
+}
+#wrap main .search .search_option {
+    position: absolute;
+    margin: 101px 0 0 282px;
+    display: flex;
+    gap: 80px;
+}
+#wrap main .search .search_option div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#wrap main .search .search_option div p {
+    display: inline;
+    padding-left: 10px;
+}
+#wrap main .search .search_button {
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    right: 47px;
+    top: 29px;
+}
+#wrap main .search .search_button a {
+    width: 122px;
+    height: 122px;
+    position: absolute;
+    border-radius: 50%;
+}
+#wrap main .search .search_button img {
+    top: 0;
+    left: 0;
+    width: 122px;
+    height: 122px;
+}
+#wrap main .quick {
+    position: absolute;
+    width: 1920px;
+    top: 347px;
+    text-align: center;
+}
+#wrap main .quick a {
+    margin: 0 24px 0 24px;
+}
+#wrap main .parking_state {
+    position: relative;
+    top: -120px;
+    width: 1341px;
+    height: 575px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+#wrap main .parking_state .parking_date {
+    width: 1341px;
+    height: 96px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background: var(--companyColor);
+    line-height: 96px;
+}
+#wrap main .parking_state .parking_date p {
+    font-size: 30px;
+    color: #fff;
+    padding-left: 85px;
+}
+#wrap main .parking_state .parking_info {
+    position: relative;
+    width: 1341px;
+    height: 227px;
+    border-bottom: 2px dashed #ddd;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+#wrap main .parking_state .parking_info p:nth-of-type(1) {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 30px 0 19px 0;
+}
+#wrap main .parking_state .parking_info p:nth-of-type(2) {
+    font-size: 70px;
+    font-weight: bold;
+}
+#wrap main .parking_state .parking_info p span {
+    font-weight: bold;
+    color: var(--companyColor);
+}
+#wrap main .parking_state .parking_info .parking_location,
+#wrap main .parking_state .parking_info .parking_time,
+#wrap main .parking_state .parking_info .parking_timepass {
+    position: relative;
+    width: 33.33%;
+}
+#wrap main .parking_state .parking_info .bookmark {
+    position: absolute;
+    right: 26px;
+    top: 26px;
+}
+#wrap main .parking_state .parking_price {
+    width: 1341px;
+    height: 155px;
+    position: relative;
+    text-align: center;
+}
+#wrap main .parking_state .parking_price p {
+    font-size: 60px;
+    line-height: 155px;
+}
+#wrap main .parking_state .parking_price p span {
+    font-size: 70px;
+    font-weight: bold;
+    color: var(--companyColor);
+}
+#wrap main .parking_state .parkingLot_info {
+    position: relative;
+    width: 1341px;
+    height: 96px;
+    background: var(--companyColor);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+#wrap main .parking_state .parkingLot_info span {
+    font-size: 28px;
+    color: #fff;
+    padding-left: 85px;
+    line-height: 96px;
+}
+#wrap main .parking_state .parkingLot_info span:nth-of-type(2) {
+    padding-left: 231px;
+}
+#wrap main .indicators {
+    position: relative;
+    top: -84px;
+    width: 1341px;
+    height: 21px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 37px;
+}
+#wrap main .indicators div.fill {
+    background: var(--companyColor);
+}
+#wrap main .indicators div {
+    width: 21px;
+    height: 21px;
+    background: #d7d7d7;
+    border-radius: 50%;
+}
+#wrap main .business_part {
+    position: relative;
+    top: -120px;
+    width: 1341px;
+    height: 282px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+#wrap main .business_part a {
+    position: relative;
+    top: 66px;
+    width: 644px;
+    height: 282px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#wrap main .business_part a img {
+    position: absolute;
+    width: 644px;
+    height: 282px;
+}
+#wrap main .business_part a p {
+    position: absolute;
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+}
+#wrap main .floating {
+    position: fixed;
+    top: 550px;     /* 피그마에서 구현 안돼있어서 임의로 지정함. 수정해주쇼! */
+    right: 106px;
+    width: 77px;
+    height: 269px;
+    gap: 19px;
+}
+#wrap main .floating .AIvoice,
+#wrap main .floating .floatingTop {
+    padding-bottom: 19px;
+}
+#wrap main .floating img {
+    width: 77px;
+    height: 77px;
+}
 
 
 
@@ -138,7 +391,7 @@ footer .footerInner {
     width: 1341px;
     height: 100%;
     margin: 0 auto;
-    border-top: 2px solid #3C77CF;
+    box-shadow: 0 -5px 10px rgba(60, 119, 207, 0.1);
 }
 footer .footerInner .blogo {
     position: absolute;
@@ -171,7 +424,6 @@ footer .footerInner span {
 }
 footer .footerInner span a {
     position: relative;
-    font-weight: 500;
 }
 footer .footerInner .footer_menu {
     position: absolute;

@@ -17,7 +17,10 @@ a {text-decoration: none;}
 li {list-style: none;}
 p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard';}
 
-#wrap {width: 100%;}
+#wrap {
+    width: 100%;
+    position: relative;
+}
 
 /* ====================
     header
@@ -25,18 +28,27 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
 #wrap header {
     width: 100%; height: 96px;
     background-color: #fff;
+    z-index: 3;
+    position: fixed;
 }
 #wrap header .headerInner {
     width: 1342px; height: 96px;
     display: flex;
-    gap: 240px;
     align-items: center;
     margin: 0 auto;
     box-shadow: 0 5px 10px rgba(60, 119, 207, 0.1);
+    justify-content: space-between;
+    position: relative;
 }
+
+#wrap header .headerInner h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 요소 크기의 절반만큼 이동 */
+}
+
 #wrap header .headerInner .toggle {
-    margin-top: -15px;
-    margin-right: 222px;
     font-size: 25px;
     color: var(--companyColor);
     display: flex;
@@ -46,25 +58,49 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
 #wrap header .headerInner .headerInfo {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
 }
-#wrap header .headerInner .headerInfo .money {
-    margin-right: 14px;
+
+#wrap header .headerInner .headerInfo .mypage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrap header .headerInner .headerInfo .mypage .money {
     height: 30px;
     font-size: 24px;
     line-height: 30px;
     color: var(--companyColor);
-}
-#wrap header .headerInner .headerInfo .log a {
     display: flex;
+    gap: 5px;
+}
+
+#wrap header .headerInner .headerInfo .mypage .money span {
+    color: var(--companyColor);
+}
+
+#wrap header .headerInner .headerInfo .bell img {
+    color: #223E94;
+}
+
+#wrap header .headerInner .headerInfo .log {
+    display: flex;
+    background-color: var(--companyColor);
+    border-radius: 10px;
+    width: 92px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 11px;
+}
+
+#wrap header .headerInner .headerInfo .log a {
     color: #fff;
     font-size: 20px;
     line-height: 20px;
     text-align: center;
-    background-color: var(--companyColor);
-    padding: 11px 8px;
     font-weight: bold;
-    border-radius: 10px;
 }
 
 
@@ -73,7 +109,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
 #wrap .menu {
     width: 358px;
     height: 1080px;
-    z-index: 3;
+    z-index: 4;
     position: fixed;
     background-color: #fff;
     top: 0;left: 0;
@@ -123,10 +159,11 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
     main
 ====================*/
 #wrap main {
-    /* position: relative; */
+    position: relative;
     width: 1920px;
     height: 1369px;
     margin: 0 auto;
+    top: 96px;
 }
 #wrap main .banner {
     width: 1920px;
@@ -219,7 +256,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
 #wrap main .quick {
     position: absolute;
     width: 1920px;
-    top: 347px;
+    top: 251px;
     text-align: center;
 }
 #wrap main .quick a {
@@ -256,6 +293,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
     align-items: center;
     text-align: center;
 }
+
 #wrap main .parking_state .parking_info p:nth-of-type(1) {
     font-size: 30px;
     font-weight: 600;
@@ -267,7 +305,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
 }
 #wrap main .parking_state .parking_info p span {
     font-weight: bold;
-    color: var(--companyColor);
+    color: #223E94;
 }
 #wrap main .parking_state .parking_info .parking_location,
 #wrap main .parking_state .parking_info .parking_time,
@@ -275,11 +313,14 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
     position: relative;
     width: 33.33%;
 }
+
 #wrap main .parking_state .parking_info .bookmark {
     position: absolute;
     right: 26px;
     top: 26px;
 }
+
+
 #wrap main .parking_state .parking_price {
     width: 1341px;
     height: 155px;
@@ -293,7 +334,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
 #wrap main .parking_state .parking_price p span {
     font-size: 70px;
     font-weight: bold;
-    color: var(--companyColor);
+    color: #223E94;
 }
 #wrap main .parking_state .parkingLot_info {
     position: relative;
@@ -371,7 +412,8 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
 
 
 #wrap main .floating .AIvoice,
-#wrap main .floating .floatingTop {
+#wrap main .floating .business,
+#wrap main .floating .floatingTop  {
     padding-bottom: 19px;
 }
 #wrap main .floating img {
@@ -388,6 +430,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000; font-family: 'pretendard
 footer {
     width: 100%;
     height: 192px;
+    z-index: 2;
 }
 footer .footerInner {
     position: relative;

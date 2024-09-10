@@ -134,27 +134,27 @@
             main
         ==================== -->
         <main>
-            <div class="background"></div>
+            <div class="banner"><img src="./images/mainBanner.png" alt="배너"></div>
             <div class="search">
-                <div class="search_local">
+                <div class="search_local hoverAi" data-audio="./aiAudio/01_지역을_선택하여_고객님과_가장_가까운_주차장을_선택할_수_있습니다.mp3">
                     <p>지역 검색<span>▼</span></p>
                 </div>
-                <div class="search_date">
+                <div class="search_date hoverAi" data-audio="./aiAudio/02_날짜를_선택하여_주차를_원하는_날짜를_선택할_수_있습니다.mp3">
                     <p>날짜 검색<span>▼</span></p>
                 </div>
-                <div class="search_keyword">
+                <div class="search_keyword hoverAi" data-audio="./aiAudio/03_원하는_주차장_주차장_이름_지역_등을_직접_검색할_수_있습니다.mp3">
                     <p>직접 검색</p>
                 </div>
-                <div class="search_kind">
+                <div class="search_kind hoverAi" data-audio="./aiAudio/05_실내_야외_타워형_주차장_등_주차장_종류를_선택할_수_있습니다.mp3">
                     <p>주차장 종류<span>▼</span></p>
                 </div>
                 <div class="search_option">
-                    <div><img src="./images/svg/Check_ring.svg" alt="검색바 체크버튼"><p>정기권 여부</p></div>
-                    <div><img src="./images/svg/Check_ring.svg" alt="검색바 체크버튼"><p>가족</p></div>
-                    <div><img src="./images/svg/Check_ring.svg" alt="검색바 체크버튼"><p>장애인</p></div>
-                    <div><img src="./images/svg/Check_ring.svg" alt="검색바 체크버튼"><p>전기차</p></div>
+                    <div class="ticket hoverAi" data-audio="./aiAudio/06_월_정기권_결제가_가능한_주차장을_검색합니다.mp3"><img src="./images/svg/Check_ring.svg" alt="검색바 체크버튼"><p>정기권 여부</p></div>
+                    <div class="family hoverAi" data-audio="./aiAudio/07_가족_주차장_이용이_가능한_주차장을_선택합니다.mp3"><img src="./images/svg/Check_ring.svg" alt="검색바 체크버튼" ><p>가족</p></div>
+                    <div class="disabled hoverAi" data-audio="./aiAudio/08_장애인_주차장_이용이_가능한_주차장을_선택합니다.mp3"><img src="./images/svg/Check_ring.svg" alt="검색바 체크버튼" ><p>장애인</p></div>
+                    <div class="electricCar hoverAi" data-audio="./aiAudio/09_전기차_충전소_등_관련_서비스를_이용할_수_있는_주차장을_선택합니다.mp3"><img src="./images/svg/Check_ring.svg" alt="검색바 체크버튼" ><p>전기차</p></div>
                 </div>
-                <div class="search_button"><a href="#"></a><img src="./images/svg/search.svg" alt="검색하기"></div>
+                <div class="search_button hoverAi" data-audio="./aiAudio/04_해당_버튼을_눌러_원하시는_주차장을_검색할_수_있습니다.mp3"><a href="#"></a><img src="./images/svg/search.svg"  alt="검색하기" ></div>
             </div>
             <div class="quick">
                  <a href="#"><img src="./images/svg/quick1.svg" alt="지도 검색"></a>
@@ -196,16 +196,14 @@
                 <a href="#"><img src="./images/rentalCar.png" alt="렌터카 대여 문의"><p>렌터카 대여 문의</p></a>
                 <a href="#"><img src="./images/shared.png" alt="내 주차장 공유 등록"><p>내 주차장 공유 등록</p></a>
             </div>
-            <div class="banner">
-                <a href="#"><img src="" alt=""></a>
-            </div>
             <div class="floating">
-                <div class="AIvoice"><img src="./images/svg/floatingAi.svg" alt="AI 음성지원 서비스 불러오기"></div>
-                <div class="AIvoice"><img src="./images/svg/ai.svg" alt="비즈니스 사이드 메뉴로 가기"></div>
+                <div class="AIvoice" id="aiButton" data-audio="./aiAudio/10_해당_버튼을_누르면_팝업창에서_선택하지_못한_이용자도_다시_한_번_음성_안내_기능을_사용.mp3"><img id="aiImage" src="./images/svg/floatingAinormal.svg" alt="AI 음성지원 서비스" onclick="changeImage()"></div>
                 <div class="floatingTop"><img src="./images/svg/floatingTop.svg" alt="맨 위로 가기"></div>
                 <div class="floatingBottom"><img src="./images/svg/floatingBottom.svg" alt="맨 아래로 가기"></div>
             </div>
         </main>
+
+
 
 
 
@@ -236,5 +234,71 @@
             popup
         ==================== -->
     </div>
+
+    
+    <script>
+        let currentAudio = null; // 현재 재생 중인 오디오를 추적
+  
+              // AI 이미지 변경
+              function changeImage() {
+                  var image = document.getElementById('aiImage');
+                  if (image.src.includes('floatingAinormal.svg')) {
+                      image.src = './images/svg/floatingAiActive.svg';
+                  } else {
+                      image.src = './images/svg/floatingAinormal.svg';
+                  }
+                  toggleAudioHover(image.src.includes('floatingAiActive.svg')); // 이미지가 Active 상태일 때 hoverAi 요소들에 오디오 기능 활성화
+              }
+  
+              // hoverAi 클래스에 마우스 호버 시 data-audio를 재생하는 함수
+              function toggleAudioHover(isActive) {
+                  const hoverElements = document.querySelectorAll('.hoverAi');
+                  hoverElements.forEach(element => {
+                      if (isActive) {
+                          // 마우스가 요소에 들어갈 때 오디오 재생
+                          element.addEventListener('mouseenter', playAudio);
+                          element.addEventListener('mouseleave', stopAudio); // 마우스가 떠나면 오디오 정지
+                      } else {
+                          // 기능 비활성화: 기존 이벤트 제거
+                          element.removeEventListener('mouseenter', playAudio);
+                          element.removeEventListener('mouseleave', stopAudio);
+                      }
+                  });
+              }
+  
+              // data-audio 속성에 있는 오디오를 재생하는 함수
+              function playAudio(event) {
+                  const audioSrc = event.currentTarget.getAttribute('data-audio');
+                  if (audioSrc) {
+                      stopAudio(); // 기존 오디오가 있으면 정지
+                      currentAudio = new Audio(audioSrc); // 새로운 오디오 객체 생성
+                      currentAudio.play();
+                  }
+              }
+  
+              // 오디오를 정지하는 함수
+              function stopAudio() {
+                  if (currentAudio) {
+                      currentAudio.pause(); // 오디오 일시 정지
+                      currentAudio.currentTime = 0; // 오디오 시간 초기화
+                      currentAudio = null; // 현재 오디오 초기화
+                  }
+              }
+  
+              // AIvoice 클래스에 마우스 호버 시 data-audio를 재생하는 이벤트 추가
+              const aiVoiceElement = document.querySelector('.AIvoice');
+              if (aiVoiceElement) {
+                  aiVoiceElement.addEventListener('mouseenter', function(event) {
+                      const image = document.getElementById('aiImage');
+                      if (!image.src.includes('floatingAiActive.svg')) {
+                          playAudio(event); // 이미지가 Active 상태가 아닐 때만 오디오 재생
+                      }
+                  });
+                  aiVoiceElement.addEventListener('mouseleave', stopAudio); // 마우스가 떠나면 오디오 정지
+              }
+  
+      </script>
+  
+
 </body>
 </html>

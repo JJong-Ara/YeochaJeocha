@@ -1,13 +1,13 @@
 @charset "utf-8";
 
 /* font */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 @font-face {
     font-family: 'NEXEN TIRE';
     src: url('../font/NEXEN_TIRE_Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 
 /* color */
@@ -64,6 +64,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
     font-size: 25px;
     line-height: 40px;
     margin-left: 20px;
+    font-weight: normal;
     color: var(--companyColor);
 }
 
@@ -597,7 +598,7 @@ footer .footerInner select option {
 ====================*/
 
 #ai_audio_popup {
-    position: absolute;
+    position: fixed;
     width: 566px;
     height: 508px;
     z-index: 10;
@@ -671,6 +672,12 @@ footer .footerInner select option {
     padding-top: 20px;
     gap: 20px;
 }
+.button_container .no {
+    background-color: #fff;
+}
+.button_container .no>button {
+    color: var(--companyColor);
+}
 
 .aibutton {
     width: 449px;
@@ -678,11 +685,12 @@ footer .footerInner select option {
     line-height: 63px;
     border-radius: 30px;
     background-color: var(--companyColor);
+    border: 3px solid var(--companyColor);
     margin: 15px auto;
     text-align: center;
 }
 
-.aibutton button>p {
+.aibutton>button {
     font-size: 30px;
     line-height: 63px;
     color: #fff;

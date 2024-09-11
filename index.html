@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메인</title>
     <link rel="stylesheet" href="./css/index-style.css">
+
+    <!-- 0910 추가 -->
+    <meta property="og:title" content="easyPcar">
+    <meta property="og:description" content="주차관리시스템">
+    <meta property="og:image" content="./images/urlImg.png">
+    <meta property="og:url" content="https://jjong-ara.github.io/YeochaJeocha/">
+    
+
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="./js/common.js"></script>
+    <script src="./js/index-script.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -39,9 +48,9 @@
                                         <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
                                     </a>
                                     <ul class="subMenu">
-                                        <li><a href="#"><img src="./images/svg/주차장 검색.svg" alt="주차장 검색">주차장 검색</a></li>
-                                        <li><a href="#"><img src="./images/svg/주차예약 신청.svg" alt="주차예약 신청">주차예약 신청</a></li>
-                                        <li><a href="#"><img src="./images/svg/신청내역 확인.svg" alt="신청내역 확인/변경">신청내역 확인/변경</a></li>
+                                        <li><a href="#"><img src="./images/svg/주차장검색.svg" alt="주차장 검색">주차장 검색</a></li>
+                                        <li><a href="#"><img src="./images/svg/주차예약신청.svg" alt="주차예약 신청">주차예약 신청</a></li>
+                                        <li><a href="#"><img src="./images/svg/신청내역확인.svg" alt="신청내역 확인/변경">신청내역 확인/변경</a></li>
                                     </ul>
                                 </li>
                                 <li class="accordion-item">
@@ -53,10 +62,10 @@
                                         <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
                                     </a>
                                     <ul class="subMenu">
-                                        <li><a href="#"><img src="./images/svg/내 정보.svg" alt="내 정보">내 정보</a></li>
-                                        <li><a href="#"><img src="./images/svg/정기권 관리.svg" alt="정기권 관리">정기권 관리</a></li>
+                                        <li><a href="#"><img src="./images/svg/내정보.svg" alt="내 정보">내 정보</a></li>
+                                        <li><a href="#"><img src="./images/svg/정기권관리.svg" alt="정기권 관리">정기권 관리</a></li>
                                         <li><a href="#"><img src="./images/svg/주차기록.svg" alt="주차기록">주차기록</a></li>
-                                        <li><a href="#"><img src="./images/svg/내 후기.svg" alt="내 후기">내 후기</a></li>
+                                        <li><a href="#"><img src="./images/svg/내후기.svg" alt="내 후기">내 후기</a></li>
                                     </ul>
                                 </li>
                                 <li class="accordion-item">
@@ -76,8 +85,8 @@
                                         <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
                                     </a>
                                     <ul class="subMenu">
-                                        <li><a href="#"><img src="./images/svg/요금 환불 신청.svg" alt="요금 환불 신청">요금 환불 신청</a></li>
-                                        <li><a href="#"><img src="./images/svg/환불 내역.svg" alt="환불 내역/결과 조회">환불 내역/결과 조회</a></li>
+                                        <li><a href="#"><img src="./images/svg/요금환불신청.svg" alt="요금 환불 신청">요금 환불 신청</a></li>
+                                        <li><a href="#"><img src="./images/svg/환불내역.svg" alt="환불 내역/결과 조회">환불 내역/결과 조회</a></li>
                                     </ul>
                                 </li>
                                 <li class="accordion-item">
@@ -89,9 +98,9 @@
                                         <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
                                     </a>
                                     <ul class="subMenu">
-                                        <li><a href="#"><img src="./images/svg/정기권 조회.svg" alt="정기권 조회/신청">정기권 조회/신청</a></li>
-                                        <li><a href="#"><img src="./images/svg/정기권 대기 현황.svg" alt="정기권 대기 현황">정기권 대기 현황</a></li>
-                                        <li><a href="#"><img src="./images/svg/정기권 환불.svg" alt="정기권 환불">정기권 환불</a></li>
+                                        <li><a href="#"><img src="./images/svg/정기권조회.svg" alt="정기권 조회/신청">정기권 조회/신청</a></li>
+                                        <li><a href="#"><img src="./images/svg/정기권대기현황.svg" alt="정기권 대기 현황">정기권 대기 현황</a></li>
+                                        <li><a href="#"><img src="./images/svg/정기권환불.svg" alt="정기권 환불">정기권 환불</a></li>
                                     </ul>
                                 </li>
                                 <li class="accordion-item">
@@ -103,9 +112,9 @@
                                         <img src="./images/svg/bottomArrow.svg" alt="서브메뉴 펼치기">
                                     </a>
                                     <ul class="subMenu">
-                                        <li><a href="#"><img src="./images/svg/제휴 주차장 조회.svg" alt="제휴 주차장 조회">제휴 주차장 조회</a></li>
-                                        <li><a href="#"><img src="./images/svg/내 주차장 공유 등록.svg" alt="내 주차장 공유 등록">내 주차장 공유 등록</a></li>
-                                        <li><a href="#"><img src="./images/svg/제휴 주차장 매칭 문의.svg" alt="제휴 주차장 매칭 문의">제휴 주차장 매칭 문의</a></li>
+                                        <li><a href="#"><img src="./images/svg/제휴주차장조회.svg" alt="제휴 주차장 조회">제휴 주차장 조회</a></li>
+                                        <li><a href="#"><img src="./images/svg/내주차장공유등록.svg" alt="내 주차장 공유 등록">내 주차장 공유 등록</a></li>
+                                        <li><a href="#"><img src="./images/svg/제휴주차장매칭문의.svg" alt="제휴 주차장 매칭 문의">제휴 주차장 매칭 문의</a></li>
                                     </ul>
                                 </li>
                                 <li class="accordion-item">
@@ -118,7 +127,7 @@
                                     </a>
                                     <ul class="subMenu">
                                         <li><a href="#"><img src="./images/svg/공지사항.svg" alt="공지사항">공지사항</a></li>
-                                        <li><a href="#"><img src="./images/svg/자주 묻는 질문.svg" alt="자주 묻는 질문">자주 묻는 질문</a></li>
+                                        <li><a href="#"><img src="./images/svg/자주묻는질문.svg" alt="자주 묻는 질문">자주 묻는 질문</a></li>
                                         <li><a href="#"><img src="./images/svg/개인정보처리방침.svg" alt="개인정보처리방침">개인정보처리방침</a></li>
                                     </ul>
                                 </li>
@@ -145,7 +154,6 @@
             </div>
         </header>
 
-
         <!-- ====================
             main
         ==================== -->
@@ -159,16 +167,17 @@
                     <p>날짜 검색<span>▼</span></p>
                 </div>
                 <div class="search_keyword hoverAi" data-audio="./aiAudio/03_원하는_주차장_주차장_이름_지역_등을_직접_검색할_수_있습니다.mp3">
-                    <p>직접 검색</p>
+                    <!-- <p>직접 검색</p> -->
+                    <input type="text" placeholder="직접 검색" maxlength="50">
                 </div>
                 <div class="search_kind hoverAi" data-audio="./aiAudio/05_실내_야외_타워형_주차장_등_주차장_종류를_선택할_수_있습니다.mp3">
                     <p>주차장 종류<span>▼</span></p>
                 </div>
                 <div class="search_option">
-                    <div class="ticket hoverAi" data-audio="./aiAudio/06_월_정기권_결제가_가능한_주차장을_검색합니다.mp3"><img src="./images/svg/Check_ring.svg" alt="검색바 체크버튼"><p>정기권 여부</p></div>
-                    <div class="family hoverAi" data-audio="./aiAudio/07_가족_주차장_이용이_가능한_주차장을_선택합니다.mp3"><img src="./images/svg/Check_ring.svg" alt="검색바 체크버튼" ><p>가족</p></div>
-                    <div class="disabled hoverAi" data-audio="./aiAudio/08_장애인_주차장_이용이_가능한_주차장을_선택합니다.mp3"><img src="./images/svg/Check_ring.svg" alt="검색바 체크버튼" ><p>장애인</p></div>
-                    <div class="electricCar hoverAi" data-audio="./aiAudio/09_전기차_충전소_등_관련_서비스를_이용할_수_있는_주차장을_선택합니다.mp3"><img src="./images/svg/Check_ring.svg" alt="검색바 체크버튼" ><p>전기차</p></div>
+                    <div class="ticket hoverAi" data-audio="./aiAudio/06_월_정기권_결제가_가능한_주차장을_검색합니다.mp3"><img src="./images/svg/Check_ring.svg" class="checkBox" alt="검색바 체크버튼"><p>정기권 여부</p></div>
+                    <div class="family hoverAi" data-audio="./aiAudio/07_가족_주차장_이용이_가능한_주차장을_선택합니다.mp3"><img src="./images/svg/Check_ring.svg" class="checkBox" alt="검색바 체크버튼" ><p>가족</p></div>
+                    <div class="disabled hoverAi" data-audio="./aiAudio/08_장애인_주차장_이용이_가능한_주차장을_선택합니다.mp3"><img src="./images/svg/Check_ring.svg" class="checkBox" alt="검색바 체크버튼" ><p>장애인</p></div>
+                    <div class="electricCar hoverAi" data-audio="./aiAudio/09_전기차_충전소_등_관련_서비스를_이용할_수_있는_주차장을_선택합니다.mp3"><img src="./images/svg/Check_ring.svg" class="checkBox" alt="검색바 체크버튼" ><p>전기차</p></div>
                 </div>
                 <div class="search_button hoverAi" data-audio="./aiAudio/04_해당_버튼을_눌러_원하시는_주차장을_검색할_수_있습니다.mp3"><a href="#"></a><img src="./images/svg/search.svg"  alt="검색하기" ></div>
             </div>
@@ -213,17 +222,21 @@
                 <a href="#"><img src="./images/shared.png" alt="내 주차장 공유 등록"><p>내 주차장 공유 등록</p></a>
             </div>
 
-
+            <!-- 광고배너 -->
+            <div class="banner_container">
+                <a href="#"><img src="./images/eventBanner.png" alt="삼성카드 결제하면 최대 5천원 혜택"></a>
+            </div>
             <!-- ====================
                 side popup
             ==================== -->
 
             <div class="floating">
-                <div class="AIvoice" id="aiButton" data-audio="./aiAudio/10_해당_버튼을_누르면_팝업창에서_선택하지_못한_이용자도_다시_한_번_음성_안내_기능을_사용.mp3"><img id="aiImage" src="./images/svg/floatingAinormal.svg" alt="AI 음성지원 서비스" onclick="changeImage()"></div>
-                <div class="business" ><img id="aiImage" src="./images/svg/business.svg" alt="비즈니스서비스" ></div>
-                <div class="floatingTop"><img src="./images/svg/floatingTop.svg" alt="맨 위로 가기"></div>
-                <div class="floatingBottom"><img src="./images/svg/floatingBottom.svg" alt="맨 아래로 가기"></div>
+                <div class="AIvoice" id="aiButton" data-audio="./aiAudio/10_해당_버튼을_누르면_팝업창에서_선택하지_못한_이용자도_다시_한_번_음성_안내_기능을_사용.mp3"><img id="aiAudioImage" src="./images/svg/floatingAinormal.svg" alt="AI 음성지원 서비스" onclick="changeImage()"></div>
+                <div class="business" ><img id="aiBusinessImage" src="./images/svg/business.svg" alt="비즈니스서비스" ></div>
+                <div class="floatingTop" id="topBtn"><img src="./images/svg/floatingTop.svg" alt="맨 위로 가기"></div>
+                <div class="floatingBottom" id="bottomBtn"><img src="./images/svg/floatingBottom.svg" alt="맨 아래로 가기"></div>
             </div>
+
             <!-- ====================
                 footer
             ==================== -->
@@ -245,103 +258,47 @@
                 </div>
             </footer>
         </main>
-
-
-
-
-
-
-
     </div>
 
+    <!-- ====================
+        popup 0910 추가함 (ai_click.svg도 저장함)
+    ==================== -->
 
-            
-
-        
-
-
-
-
-
-
-        <!-- ====================
-            script
-        ==================== -->
-
-    
-    <script>
-        let currentAudio = null; // 현재 재생 중인 오디오를 추적
-  
-              // AI 이미지 변경
-              function changeImage() {
-                  var image = document.getElementById('aiImage');
-                  if (image.src.includes('floatingAinormal.svg')) {
-                      image.src = './images/svg/floatingAiActive.svg';
-                  } else {
-                      image.src = './images/svg/floatingAinormal.svg';
-                  }
-                  toggleAudioHover(image.src.includes('floatingAiActive.svg')); // 이미지가 Active 상태일 때 hoverAi 요소들에 오디오 기능 활성화
-              }
-  
-              // hoverAi 클래스에 마우스 호버 시 data-audio를 재생하는 함수
-              function toggleAudioHover(isActive) {
-                  const hoverElements = document.querySelectorAll('.hoverAi');
-                  hoverElements.forEach(element => {
-                      if (isActive) {
-                          // 마우스가 요소에 들어갈 때 오디오 재생
-                          element.addEventListener('mouseenter', playAudio);
-                          element.addEventListener('mouseleave', stopAudio); // 마우스가 떠나면 오디오 정지
-                      } else {
-                          // 기능 비활성화: 기존 이벤트 제거
-                          element.removeEventListener('mouseenter', playAudio);
-                          element.removeEventListener('mouseleave', stopAudio);
-                      }
-                  });
-              }
-  
-              // data-audio 속성에 있는 오디오를 재생하는 함수
-              function playAudio(event) {
-                  const audioSrc = event.currentTarget.getAttribute('data-audio');
-                  if (audioSrc) {
-                      stopAudio(); // 기존 오디오가 있으면 정지
-                      currentAudio = new Audio(audioSrc); // 새로운 오디오 객체 생성
-                      currentAudio.play();
-                  }
-              }
-  
-              // 오디오를 정지하는 함수
-              function stopAudio() {
-                  if (currentAudio) {
-                      currentAudio.pause(); // 오디오 일시 정지
-                      currentAudio.currentTime = 0; // 오디오 시간 초기화
-                      currentAudio = null; // 현재 오디오 초기화
-                  }
-              }
-  
-              // AIvoice 클래스에 마우스 호버 시 data-audio를 재생하는 이벤트 추가
-              const aiVoiceElement = document.querySelector('.AIvoice');
-              if (aiVoiceElement) {
-                  aiVoiceElement.addEventListener('mouseenter', function(event) {
-                      const image = document.getElementById('aiImage');
-                      if (!image.src.includes('floatingAiActive.svg')) {
-                          playAudio(event); // 이미지가 Active 상태가 아닐 때만 오디오 재생
-                      }
-                  });
-                  aiVoiceElement.addEventListener('mouseleave', stopAudio); // 마우스가 떠나면 오디오 정지
-              }
-              
-              document.getElementById('bookmarkIcon').addEventListener('click', function() {
-                // 현재 이미지가 비어있는 별일 경우 채워진 별로 변경
-                if (this.src.includes('star_empty.svg')) {
-                    this.src = './images/svg/star_fill.svg';
-                } else {
-                    // 이미 채워진 별일 경우 다시 비어있는 별로 변경
-                    this.src = './images/svg/star_empty.svg';
-                }
-                });
-              
-      </script>
-  
+    <div id="ai_audio_popup">
+        <div class="ai_popup_header">
+            <h2>이용에 도움이 필요하신가요?</h2>
+            <button id="ai_close">X</button>
+        </div>
+        <div class="ai_popup_main">
+            <div class="text_container">
+                <h3 class="text1">
+                    음성안내로 이용을 도와드립니다.
+                </h3>
+                <p>음성안내를 듣기 어려우시다면</p>
+                <h3 class="text2">
+                    자막으로 안내드립니다.
+                </h3>
+            </div>
+            <div class="button_container">
+                <div class="aibutton">
+                    <button class="test">
+                        <img src="././images/svg/ai_audio_notice.svg" alt="ai자막 안내팝업청">
+                        <p>테스트</p>
+                </button>
+                </div>
+                <div class="aibutton">
+                    <button>
+                        <p>자막안내</p>
+                    </button>
+                </div>
+                <div class="aibutton">
+                    <button>
+                        <p>필요없음</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

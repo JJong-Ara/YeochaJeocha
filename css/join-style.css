@@ -9,11 +9,9 @@
 }
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-
 /* color */
 :root {
     --companyColor : #3C77CF;
-    --titleFont : 'NexenTire';
 }
 
 /* reset */
@@ -21,14 +19,39 @@
 
 a {text-decoration: none;}
 li {list-style: none;}
-p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'pretendard';}
+p, span, a, h1, h2, h3, h4, h5, h6, td, th {color:#000;font-family: 'pretendard';}
 
+/* ----------------------------------------
+                회원가입 과정임
+    --------------------------------------- */
+#wrap .join1,
+#wrap .join2,
+#wrap .join3,
+#wrap .join4 
+{
+    width: 1341px;
+    margin: 0 auto;
+    z-index: 10;
+    display: none;
+}
+#wrap .join1.active,
+#wrap .join2.active,
+#wrap .join3.active,
+#wrap .join4.active {
+    display: block;
+}
+#wrap .join_process .active {
+    border-bottom: 6px solid #333;
+}
+#wrap .join_process .active p {
+    color: #000 !important;
+}
 
 #wrap header {
     width: 100%;
     position: fixed;
-    top: 0;left: 0;
-    z-index: 999999;
+    top: 0;
+    z-index: 9999;
     background-color: #fff;
     box-shadow: 0 5px 10px rgba(60, 119, 207, 0.1);
 }
@@ -40,6 +63,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
 .headerInner {
     width: 1920px; height: 96px;
     display: flex;
+    margin: 0 auto;
 }
 
 .headerIcon_container {
@@ -84,7 +108,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
 }
 
 .side-bar-header {
-    height: 150px;
+    height: 100px;
 }
 
 #side-closeToggle{
@@ -134,6 +158,12 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
     width: 268px;
     box-sizing: border-box;
 }
+
+.subMenu li a:hover {
+    background-color: #2c6dcd;
+    color: #fff;
+}
+
 .subside-bar li>a img {
     width: 24px;
 }
@@ -198,7 +228,6 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
     display: block;
 }
 
-
 .log {
     display: flex;
     background-color: var(--companyColor);
@@ -219,15 +248,13 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
 }
 
 
-
-
-
 /* ====================
     main
 ====================*/
 button {
     cursor: pointer;
 }
+
 #wrap .join_title {
     width: 398px;
     height: 120px;
@@ -235,10 +262,10 @@ button {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     font-size: 60px;
-    font-family: var(--titleFont);
+    font-family: 'NEXEN TIRE', sans-serif;
     text-align: center;
     line-height: 120px;
-    margin-top: 50px;
+    margin-top: 121px;
 }
 #wrap .join_process {
     width: 1341px;
@@ -452,7 +479,8 @@ button {
 }
 #wrap .join2 input,
 #wrap .join3 input,
-#wrap select {
+#wrap .join2 select,
+#wrap .join3 select {
     height: 50px;
     border: none;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
@@ -590,8 +618,6 @@ button {
 
 
 
-
-
 /* ====================
     footer
 ====================*/
@@ -670,6 +696,3 @@ footer .footerInner select {
 footer .footerInner select option {
     margin-left: 50px;
 }
-
-
-

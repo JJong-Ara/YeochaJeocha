@@ -13,7 +13,6 @@
 /* color */
 :root {
     --companyColor : #3C77CF;
-    --titleFont : 'NexenTire';
 }
 
 /* reset */
@@ -40,6 +39,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
 .headerInner {
     width: 1920px; height: 96px;
     display: flex;
+    margin: 0 auto;
 }
 
 .headerIcon_container {
@@ -84,7 +84,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
 }
 
 .side-bar-header {
-    height: 150px;
+    height: 100px;
 }
 
 #side-closeToggle{
@@ -134,6 +134,12 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
     width: 268px;
     box-sizing: border-box;
 }
+
+.subMenu li a:hover {
+    background-color: #2c6dcd;
+    color: #fff;
+}
+
 .subside-bar li>a img {
     width: 24px;
 }

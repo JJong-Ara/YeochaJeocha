@@ -33,3 +33,16 @@ $(function(){
         });
     });
 });
+
+
+$(document).ready(function() {
+    // 위로 이동 버튼 클릭 시 페이지 맨 위로 이동
+    $("#topBtn").on("click", function() {
+        $("html, body").animate({ scrollTop: 0 }, "smooth");
+    });
+
+    // 아래로 이동 버튼 클릭 시 페이지 맨 아래로 이동
+    $("#bottomBtn").on("click", function() {
+        $("html, body").animate({ scrollTop: $(document).height() }, "smooth");
+    });
+});

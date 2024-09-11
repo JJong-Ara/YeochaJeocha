@@ -13,7 +13,6 @@
 /* color */
 :root {
     --companyColor : #3C77CF;
-    --titleFont : 'NexenTire';
 }
 
 /* reset */
@@ -38,8 +37,10 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
 ====================*/
 
 .headerInner {
-    width: 1920px; height: 96px;
+    width: 1920px;
+    height: 96px;
     display: flex;
+    margin: 0 auto; /*0910 추가함*/
 }
 
 .headerIcon_container {
@@ -84,7 +85,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
 }
 
 .side-bar-header {
-    height: 150px;
+    height: 100px;
 }
 
 #side-closeToggle{
@@ -134,6 +135,12 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
     width: 268px;
     box-sizing: border-box;
 }
+
+.subMenu li a:hover {
+    background-color: #2c6dcd;
+    color: #fff;
+}
+
 .subside-bar li>a img {
     width: 24px;
 }
@@ -146,7 +153,7 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
     transform: translate(-50%, -50%); /* 요소 크기의 절반만큼 이동 */
 }
 
-.headerIcon_container .logo img {
+.logo img {
     height: 70px;
 }
 
@@ -227,7 +234,8 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
     position: relative;
     width: 1920px;
     height: 1369px;
-    margin: 121px auto 0;
+    margin: 0 auto;
+    top: 96px;
 }
 #wrap main .banner {
     width: 1920px;
@@ -258,6 +266,14 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
     padding-left: 15px;
     cursor: pointer;
 }
+
+.search_keyword input {
+    width: 600px;
+    border: none;
+    font-size: 20px;
+    outline: none;
+}
+
 #wrap main .search p {
     position: relative;
     width: 100%;
@@ -464,20 +480,26 @@ p, span, a, h1, h2, h3, h4, h5, h6, td, th, li {color:#000; font-family: 'preten
     font-weight: bold;
     color: #fff;
 }
-#wrap main .floating {
-    position: fixed;
-    top: 550px;     /* 피그마에서 구현 안돼있어서 임의로 지정함. 수정해주쇼! */
-    right: 106px;
-    width: 77px;
-    height: 269px;
-    gap: 19px;
+
+.banner_container {
+    width: 1920px;
+    height: 282px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
+#wrap main .floating {
+    position: fixed;
+    bottom: 30px;
+    right: 106px;
+    width: 77px;
+    gap: 20px;
+}
 
 #wrap main .floating .AIvoice,
 #wrap main .floating .business,
 #wrap main .floating .floatingTop  {
-    padding-bottom: 19px;
+    padding-bottom: 20px;
 }
 #wrap main .floating img {
     width: 77px;
@@ -508,9 +530,11 @@ footer .footerInner .blogo {
     width: 154px;
     height: 30px;
 }
+
 footer .footerInner .blogo img {
     height: 40px;
 }
+
 footer .footerInner p,
 footer .footerInner span,
 footer .footerInner span a {
@@ -518,10 +542,12 @@ footer .footerInner span a {
     color: #808080;
     font-size: 19px;
 }
+
 footer .footerInner p {
     position: relative;
-    top: 98px;
+    top: 100px;
 }
+
 footer .footerInner p span {
     top: 0;
 }
@@ -566,5 +592,109 @@ footer .footerInner select option {
     margin-left: 50px;
 }
 
+/* ====================
+    popup 0910 추가함
+====================*/
 
+#ai_audio_popup {
+    position: absolute;
+    width: 566px;
+    height: 508px;
+    z-index: 10;
+    top: 50%; /* 화면 상단에서 50% */
+    left: 50%; /* 화면 왼쪽에서 50% */
+    transform: translate(-50%, -50%); /* 자신 크기의 50%만큼 좌우로 이동 */
+    display: none;
+}
+
+#ai_audio_popup button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.ai_popup_header {
+    height: 69px;
+    display: flex;
+    background-color: var(--companyColor);
+    padding: 18px 110px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.ai_popup_main {
+    width: 566px;
+    height: 439px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 5px 10px rgba(60, 119, 207, 0.7);
+}
+
+.ai_popup_header>h2,
+.ai_popup_header>button {
+    color: #fff;
+    font-size: 30px;
+}
+
+.ai_popup_header>button {
+    position: absolute;
+    right: 30px;
+}
+
+.ai_popup_main {
+    background-color: #fff;
+}
+
+.text1,
+.text2,
+.text_container>p {
+    font-size: 30px;
+    text-align: center;
+    color: var(--companyColor);
+}
+
+.text1 {
+    padding-top: 20px;
+}
+
+.text2 {
+    padding-top: 5px;
+}
+
+.text_container>p {
+    padding-top: 20px;
+}
+
+.button_container {
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.aibutton {
+    width: 449px;
+    height: 63px;
+    line-height: 63px;
+    border-radius: 30px;
+    background-color: var(--companyColor);
+    margin: 15px auto;
+    text-align: center;
+}
+
+.aibutton button>p {
+    font-size: 30px;
+    line-height: 63px;
+    color: #fff;
+}
+
+.aibutton button>img {
+    padding-top: 11px;
+}
+
+.test {
+    display: flex;
+    margin: 0 auto;
+    gap: 10px;
+}
 
